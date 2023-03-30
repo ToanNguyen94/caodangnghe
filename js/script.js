@@ -5,36 +5,65 @@ jQuery( function ( $ ) {
 		$body = $( 'body' );
 
 	function slickSlide() {
-		$( '.home-banner__inner' ).slick( {
-			slidesToShow: 1,
-			dots: false,
-			arrows: false,
+		// $( '.home-banner__inner' ).slick( {
+		// 	slidesToShow: 1,
+		// 	dots: false,
+		// 	arrows: false,
+		// 	autoplay: false,
+		// 	rows: 0,
+		// 	autoplaySpeed: 3000,
+		// } );
+
+		$( '.slider-main' ).owlCarousel( {
+			loop: true,
+			margin: 10,
 			autoplay: false,
-			rows: 0,
-			autoplaySpeed: 3000,
+			autoplayTimeout: 5000,
+			autoplaySpeed: 1500,
+			nav: true,
+			items: 1
+
 		} );
 
-		$( '.slider-event' ).slick( {
-			slidesToShow: 4,
-			dots: false,
-			arrows: true,
-			autoplay: false,
-			autoplaySpeed: 3000,
-			responsive: [
-				{
-					breakpoint: 991,
-					settings: {
-						slidesToShow: 2,
-					}
+		$( '.slider-event' ).owlCarousel( {
+			loop: true,
+			margin: 20,
+			nav: true,
+			// navText: ['<img src="template/frontend/images/ar1-1.png" alt="">', '<img src="template/frontend/images/ar1.png" alt="">'],
+			responsive: {
+				0: {
+					items: 1
 				},
-				{
-					breakpoint: 600,
-					settings: {
-						slidesToShow: 1
-					}
+				600: {
+					items: 3
+				},
+				1000: {
+					items: 4
 				}
-			]
+			}
 		} );
+
+		// $( '.slider-event' ).slick( {
+		// 	slidesToShow: 4,
+		// 	dots: false,
+		// 	arrows: true,
+		// 	autoplay: false,
+		// 	autoplaySpeed: 3000,
+		// 	responsive: [
+		// 		{
+		// 			breakpoint: 991,
+		// 			settings: {
+		// 				slidesToShow: 2,
+		// 			}
+		// 		},
+		// 		{
+		// 			breakpoint: 600,
+		// 			settings: {
+		// 				slidesToShow: 1
+		// 			}
+		// 		}
+		// 	]
+		// } );
 	};
 
 	function counterNumber() {

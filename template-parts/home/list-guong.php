@@ -9,7 +9,7 @@ $the_query = new WP_Query($args);
 <section class="event-home-page">
 	<div class="container">
 		<h2 class="title-primary center">GƯƠNG ĐHTT, NTVT</h2>
-		<div class="slider-event">
+		<div class="slider-event owl-carousel">
 			<?php
 			if ($the_query->have_posts()) :
 				while ($the_query->have_posts()) : $the_query->the_post();
