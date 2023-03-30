@@ -1,13 +1,15 @@
 <?php
- namespace Titanweb\cdn;
+
+namespace Titanweb\cdn;
 
 require __DIR__ . '/vendor/autoload.php';
 
 new Loader();
 new Fields();
 
-if ( ! function_exists( 'rwmb_meta' ) ) {
-	function rwmb_meta( $key, $args = [], $post_id = null ) {
+if (!function_exists('rwmb_meta')) {
+	function rwmb_meta($key, $args = [], $post_id = null)
+	{
 		return null;
 	}
 }

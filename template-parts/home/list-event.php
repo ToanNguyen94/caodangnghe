@@ -1,6 +1,6 @@
 <?php
 $args = [
-	'category_name' => 'tin-tuc',
+	'category_name' => 'su-kien',
 	'post_type'	=> 'post',
 	'posts_per_page' => 10,
 ];
