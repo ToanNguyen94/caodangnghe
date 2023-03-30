@@ -1,0 +1,14 @@
+{
+    "name": "titanweb/starter-theme",
+    "autoload": {
+        "psr-4": {
+            "Titanweb\\cdn\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "titanweb"
+        }
+    ],
+    "require": {}
+}

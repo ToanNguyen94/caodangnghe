@@ -1,0 +1,38 @@
+.home-banner {
+	overflow: hidden;
+
+	img {
+		height: 685px;
+		object-fit: cover;
+	}
+}
+
+.owl-item {
+	margin: 0 10px;
+}
+
+.event-home-page {
+	// overflow: hidden;
+}
+
+.slick-prev,
+.slick-next {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	text-indent: -9999px;
+	z-index: 2;
+	top: 35%;
+	right: 0;
+	background: transparent;
+	background-image: url('./images/next.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	opacity: 1;
+	border: 0;
+}
+
+.slick-prev {
+	transform: rotate(180deg);
+	left: 0;
+}
