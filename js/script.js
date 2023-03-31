@@ -35,6 +35,28 @@ jQuery( function ( $ ) {
 			}
 		} );
 
+		$( '.slider-partner' ).owlCarousel( {
+			loop: true,
+			margin: 20,
+			// navText: ['<img src="template/frontend/images/ar1-1.png" alt="">', '<img src="template/frontend/images/ar1.png" alt="">'],
+			nav: false,
+			autoplay: true,
+			autoplayTimeout: 5000,
+			autoplaySpeed: 1500,
+			responsive: {
+				0: {
+					items: 2,
+					margin: 10,
+				},
+				600: {
+					items: 3
+				},
+				1000: {
+					items: 5
+				}
+			}
+		} );
+
 	};
 
 	// ===== Scroll to Top ====
@@ -46,7 +68,7 @@ jQuery( function ( $ ) {
 
 			"use strict";
 
-			if ( $( this ).scrollTop() >= 100 ) {        // If page is scrolled more than 50px
+			if ( $( this ).scrollTop() >= 150 ) {        // If page is scrolled more than 50px
 
 				$( '#totop' ).fadeIn( 200 );    // Fade in the arrow
 

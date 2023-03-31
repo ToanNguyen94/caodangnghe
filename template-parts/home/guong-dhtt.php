@@ -1,14 +1,14 @@
 <?php
-$groups = rwmb_meta('post-group', ['object_type' => 'setting'], 'setting-page');
+$groups = rwmb_meta('post-group2', ['object_type' => 'setting'], 'setting-page');
 foreach ($groups as $key1 => $group) {
-	$posts  = $groups[0]['select-post1'];
-	$posts1 = $groups[1]['select-post1'];
-	$posts2 = $groups[2]['select-post1'];
+	$posts  = $groups[0]['select-post2'];
+	$posts1 = $groups[1]['select-post2'];
+	$posts2 = $groups[2]['select-post2'];
 }
 ?>
 <section class="Typical-face-home">
 	<div class="container">
-		<h2 class="title-primary center">Thành tựu và gương mặt nổi bật</h2>
+		<h2 class="title-primary center">GƯƠNG ĐHTT, NTVT</h2>
 		<div class="nav-Typical-face">
 			<div class="row">
 				<div class="col-md-4 col-sm-4 col-6">
@@ -61,10 +61,7 @@ foreach ($groups as $key1 => $group) {
 									</h3>
 								</div>
 							</div>
-						<?php
-						endforeach;
-						wp_reset_postdata();
-						?>
+						<?php endforeach; ?>
 					</div>
 				</div>
 
@@ -72,3 +69,4 @@ foreach ($groups as $key1 => $group) {
 		</div>
 	</div>
 </section>
+<?php wp_reset_postdata() ?>

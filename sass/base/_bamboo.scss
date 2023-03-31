@@ -434,7 +434,7 @@ progress {
 :focus,
 details:focus-within {
 	outline: none;
-	box-shadow: 0 0 0 2px var(--b-focus);
+	// box-shadow: 0 0 0 2px var(--b-focus);
 }
 
 @media (prefers-reduced-motion: reduce) {

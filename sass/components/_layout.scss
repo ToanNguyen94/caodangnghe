@@ -2,3 +2,109 @@
 	display: flex;
 	flex-direction: column-reverse;
 }
+
+.fluentform .ff_submit_btn_wrapper {
+	margin-bottom: 0 !important;
+}
+
+.fluentform .ff_btn_style {
+	padding: 11px 40px !important;
+	font-size: 20px !important;
+}
+
+#site-header-menu {
+	overflow: hidden;
+}
+
+.video-btn-left .ttm-play-btn {
+	padding-left: 90px;
+}
+
+.ttm-play-btn {
+	border-radius: 30px;
+	color: #fff;
+	font-size: 18px;
+	display: block;
+	padding: 10px 20px 10px 50px;
+	position: relative;
+}
+
+.ttm-video-btn .ttm-btn-play,
+.ttm-video-btn .ttm-video-btn-play {
+	height: 65px;
+	width: 65px;
+	line-height: 65px;
+	border-radius: 50%;
+	padding-left: 7px;
+	text-align: center;
+	font-size: 30px;
+	font-variant: normal;
+	text-rendering: auto;
+	display: inline-block;
+	text-align: center;
+	margin: 0 auto;
+	-webkit-transform: translate(-25%, -10%);
+	-ms-transform: translate(-25%, -10%);
+	-o-transform: translate(-25%, -10%);
+	transform: translate(-25%, -10%);
+}
+
+.ttm-play-btn:hover,
+.ttm-video-btn span.ttm-btn-play {
+	color: #fff;
+}
+
+.ttm-video-btn:hover .ttm-btn-play {
+	background-color: rgba(253, 161, 43, 0.95);
+	color: rgba(255, 255, 255, 1);
+}
+
+.ttm-video-btn .ttm-video-btn-play:before {
+	width: 94px;
+	height: 94px;
+	opacity: .41;
+}
+
+.ttm-video-btn .ttm-video-btn-play:before,
+.ttm-video-btn .ttm-video-btn-play:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	background-color: #fff;
+	z-index: -1;
+}
+
+.ttm-video-btn .ttm-video-btn-play:after {
+	z-index: 1;
+	width: 105px;
+	height: 105px;
+	opacity: .15;
+}
+
+.ttm-video-btn .ttm-video-btn-play:hover:before,
+.ttm-video-btn .ttm-video-btn-play:hover:after {
+	-webkit-animation: prittyphoto 1.05s infinite;
+	-moz-animation: prittyphoto 1.05s infinite;
+	-ms-animation: prittyphoto 1.05s infinite;
+	-o-animation: prittyphoto 1.05s infinite;
+	animation: prittyphoto 1.05s infinite;
+}
+
+@-webkit-keyframes prittyphoto {
+	100% {
+		width: 200%;
+		height: 200%;
+		opacity: 0
+	}
+}
+
+@keyframes prittyphoto {
+	100% {
+		width: 200%;
+		height: 200%;
+		opacity: 0
+	}
+}
