@@ -5,14 +5,6 @@ jQuery( function ( $ ) {
 		$body = $( 'body' );
 
 	function slickSlide() {
-		// $( '.home-banner__inner' ).slick( {
-		// 	slidesToShow: 1,
-		// 	dots: false,
-		// 	arrows: false,
-		// 	autoplay: false,
-		// 	rows: 0,
-		// 	autoplaySpeed: 3000,
-		// } );
 
 		$( '.slider-main' ).owlCarousel( {
 			loop: true,
@@ -43,28 +35,45 @@ jQuery( function ( $ ) {
 			}
 		} );
 
-		// $( '.slider-event' ).slick( {
-		// 	slidesToShow: 4,
-		// 	dots: false,
-		// 	arrows: true,
-		// 	autoplay: false,
-		// 	autoplaySpeed: 3000,
-		// 	responsive: [
-		// 		{
-		// 			breakpoint: 991,
-		// 			settings: {
-		// 				slidesToShow: 2,
-		// 			}
-		// 		},
-		// 		{
-		// 			breakpoint: 600,
-		// 			settings: {
-		// 				slidesToShow: 1
-		// 			}
-		// 		}
-		// 	]
-		// } );
 	};
+
+	// ===== Scroll to Top ====
+	function ScrollTop() {
+
+		$( '#totop' ).hide();
+
+		$window.scroll( function () {
+
+			"use strict";
+
+			if ( $( this ).scrollTop() >= 100 ) {        // If page is scrolled more than 50px
+
+				$( '#totop' ).fadeIn( 200 );    // Fade in the arrow
+
+				$( '#totop' ).addClass( 'top-visible' );
+
+			} else {
+
+				$( '#totop' ).fadeOut( 200 );   // Else fade out the arrow
+
+				$( '#totop' ).removeClass( 'top-visible' );
+
+			}
+
+		} );
+
+		$( '#totop' ).on( 'click', function () {      // When arrow is clicked
+
+			$( 'body,html' ).animate( {
+
+				scrollTop: 0                       // Scroll to top of body
+
+			}, 500 );
+
+			return false;
+
+		} );
+	}
 
 	function counterNumber() {
 		var run = false;
@@ -144,6 +153,7 @@ jQuery( function ( $ ) {
 
 
 	slickSlide();
+	ScrollTop();
 	// counterNumber();
 	// popupLogout();
 	// toggleMenu();

@@ -15,6 +15,8 @@
 	get_template_part( 'template-parts/home/new' );
 	get_template_part( 'template-parts/home/typical-face' );
 	get_template_part( 'template-parts/home/guong-mat' );
+	get_template_part( 'template-parts/home/home-video' );
+	get_template_part( 'template-parts/home/partner' );
 
 
 	?>
