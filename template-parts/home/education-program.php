@@ -1,13 +1,16 @@
 <?php
-$terms = rwmb_meta('ngang_nghe', ['object_type' => 'setting'], 'setting-page');
+
+use Titanweb\cdn\TemplateFunction;
+
+$terms = rwmb_meta( 'ngang_nghe', array( 'object_type' => 'setting' ), 'setting-page' );
 // foreach ($terms as $key => $term) {
-// 	$category_name = $term->name;
-// 	$category_id = $term->term_id;
+// $category_name = $term->name;
+// $category_id = $term->term_id;
 // }
 // $args = [
-// 	'category_name' => '$category_name',
-// 	'post_type'	=> 'post',
-// 	'posts_per_page' => 3,
+// 'category_name' => '$category_name',
+// 'post_type' => 'post',
+// 'posts_per_page' => 3,
 // ];
 // $the_query = new WP_Query($args);
 ?>
@@ -17,44 +20,40 @@ $terms = rwmb_meta('ngang_nghe', ['object_type' => 'setting'], 'setting-page');
 		<div class="nav-education-program">
 			<div class="row">
 				<?php
-				foreach ($terms as $key => $term) :
+				foreach ( $terms as $key => $term ) :
 					$category_name = $term->name;
 					$category_slug = $term->slug;
-					$category_id = $term->term_id;
-				?>
+					$category_id   = $term->term_id;
+					?>
 					<div class="col-md-4 col-sm-4 col-xs-12">
 						<div class="item">
 							<div class="image">
 								<a href="#">
-									<?php $idimage = rwmb_meta('category_image', ['object_type' => 'term'], $category_id); ?>
-									<img src="<?= esc_url(wp_get_attachment_image_url($idimage['ID']), 'full') ?>" alt="">
+									<?php $idimage = rwmb_meta( 'category_image', array( 'object_type' => 'term' ), $category_id ); ?>
+									<img src="<?= esc_url( wp_get_attachment_image_url( $idimage['ID'] ), 'full' ) ?>" alt="">
 								</a>
 							</div>
-							<h3 class="title"><a href="#">Lĩnh
-									vực: <?= $category_name ?></a></h3>
+							<h3 class="title"><a href="#">Lĩnh vực: <?= $category_name ?></a></h3>
 							<ul class="list-content more">
 								<?php
-								$args = [
-									'category_name' => '$category_slug',
-									'post_type'	=> 'post',
+								$args      = array(
+									'category_name'  => $category_slug,
+									'post_type'      => 'post',
 									'posts_per_page' => 3,
-								];
-								$the_query = new WP_Query($args);
-								if ($the_query->have_posts()) :
-									while ($the_query->have_posts()) : $the_query->the_post();
-								?>
-										<li><img src="./Trường Cao Đẳng nghề Công nghiệp Hà Nội_files/icon5.png" alt="">
+								);
+								$the_query = new WP_Query( $args );
+								if ( $the_query->have_posts() ) :
+									while ( $the_query->have_posts() ) :
+										$the_query->the_post();
+										?>
+										<li>
+											<?php TemplateFunction::get_image_path( 'icon5.png' ) ?>
 											<a href="<?= the_permalink() ?>"><?= the_title() ?></a>
 										</li>
-								<?php
+										<?php
 									endwhile;
 								endif;
 								?>
-
-								<!-- <div id="text1" class="text-hinden">
-									<li><img src="./Trường Cao Đẳng nghề Công nghiệp Hà Nội_files/icon5.png" alt=""> <a href="https://hnivc.edu.vn/cong-nghe-thong-tin-ung-dung-phan-mem.html">Công
-											nghệ thông tin ( Ứng dụng phần mềm )</a> </li>
-								</div> -->
 
 							</ul>
 							<div class="btn-container">

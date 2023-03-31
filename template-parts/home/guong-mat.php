@@ -1,14 +1,14 @@
 <?php
-	$groups = rwmb_meta( 'post-group', array( 'object_type' => 'setting' ), 'setting-page' );
+	$groups = rwmb_meta( 'post2-group', array( 'object_type' => 'setting' ), 'setting-page' );
 foreach ( $groups as $key1 => $group ) {
-	$posts  = $groups[0]['select_post'];
-	$posts1 = $groups[1]['select_post'];
-	$posts2 = $groups[2]['select_post'];
+	$posts  = $groups[0]['select-post2'];
+	$posts1 = $groups[1]['select-post2'];
+	$posts2 = $groups[2]['select-post2'];
 }
 ?>
 <section class="Typical-face-home">
 				<div class="container">
-					<h2 class="title-primary center">Thành tựu và gương mặt nổi bật</h2>
+					<h2 class="title-primary center">GƯƠNG ĐHTT, NTVT</h2>
 					<div class="nav-Typical-face">
 						<div class="row">
 							<div class="col-md-4 col-sm-4 col-6">
