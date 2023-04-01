@@ -26,11 +26,11 @@ $terms = rwmb_meta('ngang_nghe', array('object_type' => 'setting'), 'setting-pag
 							<h3 class="title"><a href="#">Lĩnh vực: <?= $category_name ?></a></h3>
 							<ul class="list-content more">
 								<?php
-								$args      = array(
-									'category_name'  => $category_slug,
-									'post_type'      => 'post',
+								$args      = [
+									'category_name'  => '$category_slug',
+									'post_type'      => 'any',
 									'posts_per_page' => 3,
-								);
+								];
 								$the_query = new WP_Query($args);
 								if ($the_query->have_posts()) :
 									while ($the_query->have_posts()) :

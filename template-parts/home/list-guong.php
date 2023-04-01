@@ -38,6 +38,7 @@ $the_query = new WP_Query($args);
 			<?php
 				endwhile;
 			endif;
+			wp_reset_postdata();
 			?>
 		</div>
 	</div>

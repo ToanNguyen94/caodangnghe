@@ -15,12 +15,12 @@ $args      = [
 $the_query = new WP_Query($args);
 
 $archive_id = get_queried_object_id();
-if ($archive_id == 13) {
+if ($archive_id != 4) {
 	$archive_id = 0;
 }
 $terms      = get_terms([
 	'taxonomy'   => 'category',
-	'hide_empty' => false,
+	'hide_empty' => 1,
 	// 'child_of'   => 1,
 	// 'childless ' => true,
 	'parent'     => $archive_id,
