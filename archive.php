@@ -46,6 +46,7 @@
 						?>
 					</div>
 				</div>
+				<?php get_template_part( 'template-parts/side-bar' ); ?>
 			</div>
 		</div>
 	</div>

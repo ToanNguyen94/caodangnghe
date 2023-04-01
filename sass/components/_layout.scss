@@ -49,6 +49,22 @@
 	transition: all 0.3s ease 0s;
 }
 
+ul.ttm-recent-post-list>li {
+	padding: 5px 0 15px !important;
+	display: inline-block;
+	width: 100%;
+	line-height: 20px;
+}
+
+ul.ttm-recent-post-list>li img {
+	display: block;
+	width: 70px;
+	height: 70px !important;
+	float: left;
+	margin-right: 15px;
+	object-fit: cover !important;
+}
+
 .video-btn-left .ttm-play-btn {
 	padding-left: 90px;
 }
