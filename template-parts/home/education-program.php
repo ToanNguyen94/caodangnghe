@@ -13,6 +13,7 @@ $terms = rwmb_meta('ngang_nghe', array('object_type' => 'setting'), 'setting-pag
 				foreach ($terms as $key => $term) :
 					$category_name = $term->name;
 					$category_id   = $term->term_id;
+					$category_slug = $term->slug;
 				?>
 					<div class="col-md-4 col-sm-4 col-xs-12">
 						<div class="item">
@@ -22,7 +23,7 @@ $terms = rwmb_meta('ngang_nghe', array('object_type' => 'setting'), 'setting-pag
 									<img src="<?= esc_url(wp_get_attachment_image_url($idimage['ID']), 'full') ?>" alt="">
 								</a>
 							</div>
-							<h3 class="title"><a href="#">Lĩnh vực: <?= $category_name ?></a></h3>
+							<h3 class="title"><a href="<?= get_post_type_archive_link('programs'); ?>">Lĩnh vực: <?= $category_name ?></a></h3>
 							<ul class="list-content more">
 								<?php
 								$args      = [

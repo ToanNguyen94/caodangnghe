@@ -1,7 +1,7 @@
 <?php
 get_header();
 // global $post;
-$terms = get_the_terms(get_the_ID(), 'category');
+$terms = get_the_terms(get_the_ID(), 'nganh');
 $category_slug = $terms[0]->slug;
 $args = [
 	'category_name' => $category_slug,

@@ -42,7 +42,10 @@ class Archive
 
 	public function change_excerpt_length()
 	{
-		return 50;
+		if (is_post_type_archive('programs')) {
+			return 20;
+		} else
+			return 50;
 	}
 
 	public function change_archive_title($title)
