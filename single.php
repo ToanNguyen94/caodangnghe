@@ -2,6 +2,7 @@
 get_header();
 // global $post;
 $terms = get_the_terms(get_the_ID(), 'category');
+
 $category_slug = $terms[0]->slug;
 $args = [
 	'category_name' => $category_slug,
@@ -12,7 +13,7 @@ $args = [
 $the_query = new WP_Query($args);
 
 ?>
-<?php get_template_part('template-parts/page-header'); ?>
+<?php get_template_part('template-parts/single-header'); ?>
 
 <div class="main-new">
 	<div class="container">

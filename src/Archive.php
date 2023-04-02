@@ -42,7 +42,7 @@ class Archive
 
 	public function change_excerpt_length()
 	{
-		if (is_post_type_archive('programs')) {
+		if (is_post_type_archive('programs') || taxonomy_exists('nganh')) {
 			return 20;
 		} else
 			return 50;

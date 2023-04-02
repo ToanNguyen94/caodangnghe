@@ -2,7 +2,12 @@
 
 use Titanweb\cdn\TemplateFunction;
 
-$terms = rwmb_meta('ngang_nghe', array('object_type' => 'setting'), 'setting-page');
+$terms2 = get_terms(
+	[
+		'taxonomy' => 'nganh',
+		'hide_empty' => false,
+	]
+);
 ?>
 <section class="education-program-home">
 	<div class="container">
@@ -10,20 +15,21 @@ $terms = rwmb_meta('ngang_nghe', array('object_type' => 'setting'), 'setting-pag
 		<div class="nav-education-program">
 			<div class="row">
 				<?php
-				foreach ($terms as $key => $term) :
+				foreach ($terms2 as $key => $term) :
 					$category_name = $term->name;
 					$category_id   = $term->term_id;
+					$category_taxonomy = $term->taxonomy;
 					$category_slug = $term->slug;
 				?>
 					<div class="col-md-4 col-sm-4 col-xs-12">
 						<div class="item">
 							<div class="image">
-								<a href="<?= get_post_type_archive_link('programs'); ?>">
+								<a href="<?= get_term_link($category_id, $category_taxonomy) ?>">
 									<?php $idimage = rwmb_meta('category_image', array('object_type' => 'term'), $category_id); ?>
 									<img src="<?= esc_url(wp_get_attachment_image_url($idimage['ID']), 'full') ?>" alt="">
 								</a>
 							</div>
-							<h3 class="title"><a href="<?= get_post_type_archive_link('programs'); ?>">Lĩnh vực: <?= $category_name ?></a></h3>
+							<h3 class="title"><a href="<?= get_term_link($category_id, $category_taxonomy) ?>">Lĩnh vực: <?= $category_name ?></a></h3>
 							<ul class="list-content more">
 								<?php
 								$args      = [

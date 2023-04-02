@@ -5,7 +5,7 @@ $tab_groups = rwmb_meta('tab-groups');
 $counter_groups = rwmb_meta('count');
 ?>
 <main class="main main-Admissions main-detail-profession">
-	<?php get_template_part('template-parts/page-header'); ?>
+	<?php get_template_part('template-parts/single-header'); ?>
 
 	<!-- Content -->
 	<div class="content-Admissions content-detail-profession">
