@@ -12,7 +12,6 @@ $terms = rwmb_meta('ngang_nghe', array('object_type' => 'setting'), 'setting-pag
 				<?php
 				foreach ($terms as $key => $term) :
 					$category_name = $term->name;
-					$category_slug = $term->slug;
 					$category_id   = $term->term_id;
 				?>
 					<div class="col-md-4 col-sm-4 col-xs-12">
@@ -27,9 +26,16 @@ $terms = rwmb_meta('ngang_nghe', array('object_type' => 'setting'), 'setting-pag
 							<ul class="list-content more">
 								<?php
 								$args      = [
-									'category_name'  => '$category_slug',
-									'post_type'      => 'any',
+									'post_type'      => 'programs',
 									'posts_per_page' => 3,
+									'tax_query'      => [
+										'relation' => 'AND',
+										[
+											'taxonomy' => 'nganh',
+											'field'    => 'id',
+											'terms'    => $category_id,
+										],
+									],
 								];
 								$the_query = new WP_Query($args);
 								if ($the_query->have_posts()) :

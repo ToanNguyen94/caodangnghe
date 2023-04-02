@@ -1,12 +1,13 @@
 <?php
 get_header();
-global $post;
-$terms = get_the_terms($post->ID, 'category');
+// global $post;
+$terms = get_the_terms(get_the_ID(), 'category');
 $category_slug = $terms[0]->slug;
 $args = [
 	'category_name' => $category_slug,
 	'post_type'	=> 'post',
 	'posts_per_page' => 10,
+	'post__not_in'   => [get_the_ID()],
 ];
 $the_query = new WP_Query($args);
 
