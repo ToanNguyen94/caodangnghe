@@ -1,3 +1,7 @@
+.site-branding img {
+	width: 188px;
+}
+
 .item2 {
 	display: flex;
 	flex-direction: column-reverse;
@@ -14,6 +18,11 @@
 
 #site-header-menu {
 	overflow: hidden;
+}
+
+.ttm-row.row-title-section {
+	padding-top: 160px;
+	padding-bottom: 75px;
 }
 
 .video-btn-left .ttm-play-btn {

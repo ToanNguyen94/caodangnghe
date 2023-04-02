@@ -1,6 +1,6 @@
 <?php
 $args = [
-	'category_name' => 'gioi-thieu',
+	'category_name' => 'guong-dhtt-ntvt',
 	'post_type'	=> 'post',
 	'posts_per_page' => 10,
 ];
