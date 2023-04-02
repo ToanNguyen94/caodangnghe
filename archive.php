@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main id="primary" class="main site-main">
-	<?php get_template_part('template-parts/page-header'); ?>
+	<?php get_template_part('template-parts/archive-header'); ?>
 
 	<div class="main-new">
 		<div class="container">

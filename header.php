@@ -2,7 +2,7 @@
 <html <?php language_attributes() ?>>
 
 <head>
-	<meta charset="<?php bloginfo( 'charset' ) ?>">
+	<meta charset="<?php bloginfo('charset') ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<div id="fb-root"></div>
@@ -101,16 +101,16 @@
 														</style>
 
 														<ul class="dropdown">
-															<li class="menu-item has-submenu"><a href="http://thuvienso.hnivc.edu.vn/">Thư Viện</a>
+															<li class="menu-item has-submenu"><a href="#">Thư Viện</a>
 																<ul class="sub-menu">
 																	<li>
-																		<a href="https://hnivc.edu.vn/giao-trinh-noi-bo.html">Giáo Trình Nội Bộ </a>
+																		<a href="#">Giáo Trình Nội Bộ </a>
 																	</li>
 																</ul>
 															</li>
-															<li class="menu-item"><a href="https://hnivc.edu.vn/lien-he.html">Liên hệ</a>
+															<li class="menu-item"><a href="<?= get_home_url() . '/lien-he' ?>">Liên hệ</a>
 															</li>
-															<li class="menu-item"><a href="http://nhapdiem.hnivc.edu.vn/">Tra cứu</a>
+															<li class="menu-item"><a href="#">Tra cứu</a>
 															</li>
 														</ul>
 													</nav>
