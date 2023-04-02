@@ -108,3 +108,15 @@
 		opacity: 0
 	}
 }
+
+details[open]>summary::after {
+	transform: rotate(45deg);
+}
+
+.acc__panel1 {
+	padding: 20px 18px;
+}
+
+.page-template-tuyen-sinh-page .content-Admissions {
+	margin: 50px 0 30px;
+}

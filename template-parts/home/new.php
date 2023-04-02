@@ -45,7 +45,7 @@ $the_query = new WP_Query($args);
 					<div class="ads">
 
 						<a href="<?= $ads_link ?>">
-							<img src="<?= esc_url(wp_get_attachment_image_url($ads_image['ID']), 'full') ?>" alt="">
+							<img src="<?= $ads_image['full_url'] ?>" alt="">
 						</a>
 					</div>
 				</div>
