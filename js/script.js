@@ -172,10 +172,23 @@ jQuery( function ( $ ) {
 		}
 	} );
 
+	function tabTransfer() {
+		$( '.tab-name' ).click( function () {
+			let tab_id = $( this ).attr( 'data-tab' );
+			console.log( 'eweqeq' );
+			$( '.tab-name' ).removeClass( 'active' );
+			$( '.tab-content' ).removeClass( 'active' );
+
+			$( this ).addClass( 'active' );
+			$( '#' + tab_id ).addClass( 'active' );
+		} );
+	}
+
 
 
 	slickSlide();
 	ScrollTop();
+	tabTransfer();
 	// counterNumber();
 	// popupLogout();
 	// toggleMenu();

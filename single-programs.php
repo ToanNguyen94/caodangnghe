@@ -1,83 +1,74 @@
+<?php get_header(); ?>
+
 <?php
-get_header();
-// global $post;
-$terms = get_the_terms(get_the_ID(), 'nganh');
-$category_slug = $terms[0]->slug;
-$args = [
-	'category_name' => $category_slug,
-	'post_type'	=> 'post',
-	'posts_per_page' => 10,
-	'post__not_in'   => [get_the_ID()],
-];
-$the_query = new WP_Query($args);
-
+$tab_groups = rwmb_meta('tab-groups');
+$counter_groups = rwmb_meta('count');
 ?>
-<?php get_template_part('template-parts/page-header'); ?>
+<main class="main main-Admissions main-detail-profession">
+	<?php get_template_part('template-parts/page-header'); ?>
 
-<div class="main-new">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-9 col-sm-9 col-xs-12">
-				<div class="content-new">
-					<div class="">
-						<!-- ttm-blog-classic-->
-						<article class="post ttm-blog-classic" <?php post_class() ?> id="<?php the_ID() ?>">
-							<div class="featured-imagebox featured-imagebox-post">
-								<h1 style="margin: 12px;font-size: 26px;line-height: 1;text-transform: none;">
-									<?= the_title() ?>
-								</h1>
-								<div class="featured-content featured-content-post" style="padding-top: 0px">
-									<div class="post-meta">
-										<span class="ttm-meta-line"><i class="fa fa-calendar"></i>
-											<?= get_the_date('d-m-Y') ?>
-										</span>
-										<span class="ttm-meta-line view"><i class="fa fa-eye"></i>
-											<?= do_shortcode('[post-views]') ?>
-										</span>
-									</div>
-									<div class="featured-desc">
-										<?= the_content() ?>
-									</div>
-								</div>
+	<!-- Content -->
+	<div class="content-Admissions content-detail-profession">
+		<div class="container">
+			<div class="tabbedPanels"> <!-- begins the tabbed panels / wrapper-->
+				<ul class="tabs">
+					<li data-tab="tab0" class="tab-name active">Nội dung</li>
+					<?php
+					foreach ($tab_groups as $key => $group) :
+						$tab_names = isset($group['tab-title']) ? $group['tab-title'] : ' ';
+					?>
+						<li data-tab="tab<?= $key + 1 ?> " class="tab-name"> <?= $tab_names ?> </li>
+					<?php endforeach; ?>
+				</ul>
+
+				<div class="panelContainer">
+					<div id="tab0" class="tab-content active">
+						<div class="content-content">
+							<?= the_content() ?>
+						</div>
+					</div> <!-- end panel 1 -->
+					<?php
+					foreach ($tab_groups as $key2 => $group) :
+						$tab_contents = isset($group['tab-content']) ? $group['tab-content'] : ' ';
+
+					?>
+						<div id="tab<?= $key2 + 1 ?>" class="tab-content">
+							<?= $tab_contents ?>
+						</div> <!-- end panel 2 -->
+					<?php endforeach; ?>
+
+				</div> <!-- end div class="panelContainer" or panel wrapper -->
+
+			</div> <!-- ends the tabbed panels / wrapper-->
+
+		</div>
+
+	</div>
+
+	<!-- Time -->
+	<div class="time-date">
+		<div class="container">
+			<div class="content-time-date">
+				<div class="row">
+					<?php
+					foreach ($counter_groups as $counter) :
+						$title = isset($counter['count-title']) ? $counter['count-title'] : '';
+						$number = isset($counter['count-number']) ? $counter['count-number'] : '';
+					?>
+						<div class="col-md-3 col-sm-6 col-6">
+							<div class="item">
+								<h4 class="title-1"><?= $title ?></h4>
+								<h3 class="title-2"><?= $number ?></h3>
 							</div>
-							<div class="clearfix"></div>
-
-							<div class="ttm-blog-classic-content single-blog">
-								<div class="ttm-blog-classic-box-comment">
-									<div id="comments" class="comments-area" style="margin: 0px">
-										<h2 class="comments-title">Bài viết liên quan</h2>
-										<ul style="padding: 0px;margin: 0px">
-											<?php
-											if ($the_query->have_posts()) :
-												while ($the_query->have_posts()) : $the_query->the_post();
-											?>
-													<li style="margin-bottom: 8px;">
-														<a href="<?= the_permalink() ?>">
-															<?= the_title() ?>
-															<!-- <i style="color: #7D7D8A;font-style: italic; font-size: 13px; margin-left: 10px;">
-																(  get_the_date('d-m-Y') )
-															</i> -->
-														</a>
-													</li>
-											<?php
-												endwhile;
-											endif;
-											?>
-										</ul>
-									</div>
-								</div>
-							</div>
-
-						</article>
-
-						<!-- ttm-blog-classic end -->
-
-					</div>
+						</div>
+					<?php endforeach; ?>
 				</div>
 			</div>
-			<?php get_template_part('template-parts/side-bar'); ?>
 		</div>
 	</div>
-</div>
 
+	<!-- Form -->
+	<?php get_template_part('template-parts/home/form'); ?>
+
+</main>
 <?php get_footer(); ?>

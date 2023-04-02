@@ -1028,7 +1028,7 @@ img {
 	margin: 0;
 }
 
-.tabbedPanels .tabs li a {
+.tabbedPanels .tabs li {
 	background: none;
 	display: inline-block;
 	padding: 7px 28px;
@@ -1047,7 +1047,7 @@ img {
 	float: left;
 }
 
-.tabbedPanels .tabs li a.active {
+.tabbedPanels .tabs li.active {
 	background: #ec8c29;
 	color: #fff;
 }
@@ -1099,7 +1099,8 @@ img {
 }
 
 .time-date .content-time-date .item {
-	background: #3c658a;
+	background: #f26624;
+	border-radius: 10px;
 	padding: 20px 10px;
 	text-align: center;
 }
@@ -1116,7 +1117,7 @@ img {
 }
 
 .time-date {
-	margin-top: 50px;
+	margin: 50px 0;
 }
 
 .time-date .content-time-date .item .title-2 {
@@ -1257,7 +1258,7 @@ img {
 		height: 350px;
 	}
 
-	.tabbedPanels .tabs li a {
+	.tabbedPanels .tabs li {
 		padding: 7px 18px;
 	}
 
@@ -1417,7 +1418,7 @@ img {
 		font-size: 15px;
 	}
 
-	.tabbedPanels .tabs li a {
+	.tabbedPanels .tabs li {
 		padding: 5px 12px;
 		font-size: 16px;
 	}

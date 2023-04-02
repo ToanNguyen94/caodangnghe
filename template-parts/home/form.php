@@ -1,8 +1,8 @@
 <?php
-$image = rwmb_meta('form-bg');
+$image = rwmb_meta('form-image', ['object_type' => 'setting'], 'setting-page');
 $image_url = isset($image['ID']) ? wp_get_attachment_image_url($image['ID'], 'full')  : '';
-$title1 = rwmb_meta('title1');
-$title2 = rwmb_meta('title2');
+$title1 = rwmb_meta('form-title1', ['object_type' => 'setting'], 'setting-page');
+$title2 = rwmb_meta('form-title2', ['object_type' => 'setting'], 'setting-page');
 ?>
 <section class="register-bottom" style="background-image: url('<?= esc_url($image_url) ?>');">
 	<div class="container">

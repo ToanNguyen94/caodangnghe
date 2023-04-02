@@ -18,7 +18,7 @@ $terms = rwmb_meta('ngang_nghe', array('object_type' => 'setting'), 'setting-pag
 					<div class="col-md-4 col-sm-4 col-xs-12">
 						<div class="item">
 							<div class="image">
-								<a href="#">
+								<a href="<?= get_post_type_archive_link('programs'); ?>">
 									<?php $idimage = rwmb_meta('category_image', array('object_type' => 'term'), $category_id); ?>
 									<img src="<?= esc_url(wp_get_attachment_image_url($idimage['ID']), 'full') ?>" alt="">
 								</a>
