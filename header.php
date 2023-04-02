@@ -85,21 +85,6 @@
 												</ul>
 												<div id="site-navigation" class="site-navigation">
 													<nav class="menu menu-header" style="float: left">
-
-														<style>
-															@media only screen and (min-width: 1200px) {
-																#site-navigation .menu-header ul>li>a {
-																	height: auto !important;
-																	line-height: normal !important;
-																	font-weight: normal !important;
-																}
-															}
-
-															#site-navigation .menu-header ul>li>a {
-																text-transform: unset !important;
-															}
-														</style>
-
 														<ul class="dropdown">
 															<li class="menu-item has-submenu"><a href="#">Thư Viện</a>
 																<ul class="sub-menu">

@@ -138,3 +138,15 @@ details[open]>summary::after {
 .map-contact iframe {
 	margin: 0;
 }
+
+@media only screen and (min-width: 1200px) {
+	#site-navigation .menu-header ul>li>a {
+		height: auto !important;
+		line-height: normal !important;
+		font-weight: normal !important;
+	}
+}
+
+#site-navigation .menu-header ul>li>a {
+	text-transform: unset !important;
+}
