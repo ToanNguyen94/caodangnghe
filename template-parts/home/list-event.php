@@ -1,6 +1,6 @@
 <?php
 $args = [
-	'category_name' => 'su-kien',
+	'category_name' => 'su-kien-sap-toi',
 	'post_type'	=> 'post',
 	'posts_per_page' => 10,
 ];

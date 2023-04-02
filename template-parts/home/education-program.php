@@ -58,9 +58,40 @@ $terms2 = get_terms(
 								endif;
 								?>
 
+								<!-- Text-hidden  -->
+								<div id="text<?= $key + 1 ?>" class="text-hinden">
+									<?php
+									$args2      = [
+										'post_type'      => 'programs',
+										'posts_per_page' => 15,
+										'offset' => 3,
+										'tax_query'      => [
+											'relation' => 'AND',
+											[
+												'taxonomy' => 'nganh',
+												'field'    => 'id',
+												'terms'    => $category_id,
+											],
+										],
+									];
+									$the_query = new WP_Query($args2);
+									if ($the_query->have_posts()) :
+										while ($the_query->have_posts()) :
+											$the_query->the_post();
+									?>
+											<li>
+												<?php TemplateFunction::get_image_path('icon5.png') ?>
+												<a href="<?= the_permalink() ?>"><?= the_title() ?></a>
+											</li>
+									<?php
+										endwhile;
+									endif;
+									?>
+								</div>
+
 							</ul>
 							<div class="btn-container">
-								<button id="toggle1">Xem thêm</button>
+								<button id="toggle<?= $key + 1 ?>">Xem thêm</button>
 							</div>
 						</div>
 					</div>

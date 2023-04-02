@@ -193,39 +193,96 @@ jQuery( function ( $ ) {
 		} );
 	}
 
+	function btnSeeMore() {
+		$( document ).ready( function () {
+			$( "#toggle1" ).click( function () {
+				var elem = $( "#toggle1" ).text();
+				if ( elem == "Xem thêm" ) {
+					//Stuff to do when btn is in the read more state
+					$( "#toggle1" ).text( "Thu gọn" );
+					$( "#text1" ).slideDown();
+				} else {
+					//Stuff to do when btn is in the read less state
+					$( "#toggle1" ).text( "Xem thêm" );
+					$( "#text1" ).slideUp();
+				}
+			} );
+
+			$( "#toggle2" ).click( function () {
+				var elem = $( "#toggle2" ).text();
+				if ( elem == "Xem thêm" ) {
+					//Stuff to do when btn is in the read more state
+					$( "#toggle2" ).text( "Thu gọn" );
+					$( "#text2" ).slideDown();
+				} else {
+					//Stuff to do when btn is in the read less state
+					$( "#toggle2" ).text( "Xem thêm" );
+					$( "#text2" ).slideUp();
+				}
+			} );
+
+			$( "#toggle3" ).click( function () {
+				var elem = $( "#toggle3" ).text();
+				if ( elem == "Xem thêm" ) {
+					//Stuff to do when btn is in the read more state
+					$( "#toggle3" ).text( "Thu gọn" );
+					$( "#text3" ).slideDown();
+				} else {
+					//Stuff to do when btn is in the read less state
+					$( "#toggle3" ).text( "Xem thêm" );
+					$( "#text3" ).slideUp();
+				}
+			} );
+
+			$( "#toggle4" ).click( function () {
+				var elem = $( "#toggle4" ).text();
+				if ( elem == "Xem thêm" ) {
+					//Stuff to do when btn is in the read more state
+					$( "#toggle4" ).text( "Thu gọn" );
+					$( "#text4" ).slideDown();
+				} else {
+					//Stuff to do when btn is in the read less state
+					$( "#toggle4" ).text( "Xem thêm" );
+					$( "#text4" ).slideUp();
+				}
+			} );
+
+			$( "#toggle5" ).click( function () {
+				var elem = $( "#toggle5" ).text();
+				if ( elem == "Xem thêm" ) {
+					//Stuff to do when btn is in the read more state
+					$( "#toggle5" ).text( "Thu gọn" );
+					$( "#text5" ).slideDown();
+				} else {
+					//Stuff to do when btn is in the read less state
+					$( "#toggle5" ).text( "Xem thêm" );
+					$( "#text5" ).slideUp();
+				}
+			} );
+			$( "#toggle6" ).click( function () {
+				var elem = $( "#toggle6" ).text();
+				if ( elem == "Xem thêm" ) {
+					//Stuff to do when btn is in the read more state
+					$( "#toggle6" ).text( "Thu gọn" );
+					$( "#text6" ).slideDown();
+				} else {
+					//Stuff to do when btn is in the read less state
+					$( "#toggle6" ).text( "Xem thêm" );
+					$( "#text6" ).slideUp();
+				}
+			} );
+		} );
+	}
+
 
 
 	slickSlide();
 	ScrollTop();
 	tabTransfer();
 	fixMenu();
+	btnSeeMore();
 	// counterNumber();
 	// popupLogout();
 	// toggleMenu();
 	// fixedMenu();
-
-	// $( 'ul li:has(ul)' ).addClass( 'has-submenu' );
-	// $( 'ul li ul' ).addClass( 'sub-menu' );
-	// $( "ul.dropdown li a:after" ).on( {
-	// 	mouseover: function () {
-	// 		$( this ).addClass( "hover" );
-	// 	},
-	// 	mouseout: function () {
-	// 		$( this ).removeClass( "hover" );
-	// 	},
-	// } );
-	// if ( $( window ).width() <= 1024 ) {
-	// 	var $menu = $( '#menu' ), $menulink = $( '#menu-toggle-form' ), $menuTrigger = $( '.has-submenu > i' );
-	// 	$menulink.on( 'click', function ( e ) {
-	// 		$menulink.toggleClass( 'active' );
-	// 		$menu.toggleClass( 'active' );
-	// 	} );
-	// 	$menuTrigger.on( 'click', function ( e ) {
-	// 		e.preventDefault();
-	// 		var t = $( this );
-	// 		t.toggleClass( 'active' ).next( 'ul' ).toggleClass( 'active' );
-	// 	} );
-	// } else {
-	// }
-	// $( 'ul li:has(ul)' );
 } );
