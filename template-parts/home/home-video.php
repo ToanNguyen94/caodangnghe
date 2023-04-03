@@ -9,7 +9,7 @@ $video_groups = rwmb_meta('video-groups');
 // $link_url1 = rwmb_meta('video-url');
 $link_video1  = rwmb_meta('viedo-link');
 ?>
-<div class="video-home-bg ">
+<div class="video-home-bg owl-carousel">
 	<?php
 	foreach ($video_groups as $group) :
 		$bg_url = isset($group['anh_background']) ? wp_get_attachment_image_url($group['anh_background'], 'full') : '';
@@ -23,7 +23,7 @@ $link_video1  = rwmb_meta('viedo-link');
 					<div class="col-md-8 col-sm-10">
 						<div class="text-center">
 							<div class="ttm-video-btn">
-								<a class="ttm-play-btn " href="<?= $link_url ?>" data-fancybox="gallery">
+								<a class="ttm-play-btn popup-video" href="<?= $link_url ?>" data-fancybox="gallery">
 									<span class="ttm-video-btn-play"><i class="fa fa-play"></i></span>
 								</a>
 							</div>

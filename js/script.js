@@ -121,15 +121,14 @@ jQuery( function ( $ ) {
 		} );
 	}
 
-	function popupLogout() {
-		$( '.popup-modal' ).magnificPopup( {
-			type: 'inline',
+	function popupVideo() {
+		$( '.popup-video' ).magnificPopup( {
+			disableOn: 800,
+			type: 'iframe',
+			mainClass: 'mfp-fade',
+			removalDelay: 160,
 			preloader: false,
-			modal: true
-		} );
-		$( document ).on( 'click', '.popup-modal-dismiss', function ( e ) {
-			e.preventDefault();
-			$.magnificPopup.close();
+			fixedContentPos: false
 		} );
 	}
 
@@ -292,8 +291,8 @@ jQuery( function ( $ ) {
 	tabTransfer();
 	fixMenu();
 	btnSeeMore();
+	popupVideo();
 	// counterNumber();
-	// popupLogout();
 	// toggleMenu();
 	// fixedMenu();
 } );
