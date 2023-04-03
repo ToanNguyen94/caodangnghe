@@ -16,10 +16,6 @@
 	font-size: 20px !important;
 }
 
-#site-header-menu {
-	overflow: hidden;
-}
-
 .ttm-row.row-title-section {
 	padding-top: 160px;
 	padding-bottom: 75px;
@@ -156,4 +152,16 @@ details[open]>summary::after {
 
 .btn-container button {
 	font-family: var(--font-main);
+}
+
+.logo-footer {
+	padding-top: 50px;
+
+	iframe {
+		height: 130px;
+	}
+}
+
+.fixed-header .site-branding {
+	justify-content: center;
 }

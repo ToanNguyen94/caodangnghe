@@ -1,12 +1,5 @@
 <?php
 $video_groups = rwmb_meta('video-groups');
-
-// $image1 = rwmb_meta('video-bg');
-// var_dump($image1);
-// $image_url = wp_get_attachment_image_url($image1['ID'], 'full');
-// var_dump($image_url);
-// $title1 = rwmb_meta('video-title', '', get_the_ID());
-// $link_url1 = rwmb_meta('video-url');
 $link_video1  = rwmb_meta('viedo-link');
 ?>
 <div class="video-home-bg owl-carousel">

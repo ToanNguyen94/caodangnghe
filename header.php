@@ -16,7 +16,6 @@
 
 	<!--header start-->
 	<header id="masthead" class="header ttm-header-style-classic">
-
 		<!-- ttm-header-wrap -->
 		<div class="ttm-header-wrap">
 			<!-- ttm-stickable-header-w -->
@@ -25,37 +24,27 @@
 				<div class="ttm-topbar-wrapper ttm-bgcolor-darkgrey ttm-textcolor-white clearfix ttm-topbar-wrapper-mobile">
 					<div class="container">
 						<div class="ttm-topbar-content">
-
 							<div class="topbar-right text-right">
 								<ul class="top-contact">
-									<li><i class="fa fa-envelope-o"></i><a href="mailto:info@hnivc.edu.vn">info@hnivc.edu.vn</a>
-									</li>
-									<li><i class="fa fa-phone"></i>0243. 8533780</li>
+									<li><i class="fa fa-envelope-o"></i><a href="mailto:info@hnivc.edu.vn">info@hnivc.edu.vn</a></li>
+									<li><a href="https://hnivc.edu.vn/">Đăng nhập</a></li>
 								</ul>
 								<ul class="login-top">
-
-									<li><a href="https://hnivc.edu.vn/">Đăng nhập</a></li>
-									<li>
-
-									</li>
-									<div id="google_translate_element_mobile"></div>
-
+									<li><i class="fa fa-phone"></i> 0243. 8533780</li>
 								</ul>
 								<div class="ttm-social-links-wrapper list-inline">
 									<ul class="social-icons">
-										<li><a href="https://www.facebook.com/hnivc131/" target="_blank"><i class="fa fa-facebook"></i></a>
+										<li><a href="https://www.facebook.com/hnivc131/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
 										</li>
-										<li><a href="https://www.tiktok.com/@tiktokhnivc" target="_blank"><i class="fa fa-twitter"></i></a>
+										<li><a href="https://www.tiktok.com/@tiktokhnivc" target="_blank"><i class="fa-brands fa-twitter"></i></a>
 										</li>
-										<li><a href="https://www.youtube.com/channel/UCnzWhlIZRPa9PZJFdEqpbvg" target="_blank"><i class="fa fa-youtube"></i></a>
+										<li><a href="https://www.youtube.com/channel/UCnzWhlIZRPa9PZJFdEqpbvg" target="_blank"><i class="fa-brands fa-youtube"></i></a>
 										</li>
-
 									</ul>
 								</div>
 							</div>
 						</div>
 					</div>
-
 
 				</div>
 				<!-- ttm-topbar-wrapper end -->
@@ -77,7 +66,8 @@
 
 											<div class="topbar-right text-right">
 												<ul class="top-contact">
-													<li><i class="fa fa-envelope"></i><a href="mailto:info@hnivc.edu.vn">info@hnivc.edu.vn</a>
+													<li>
+														<i class="fa fa-envelope"></i><a href="mailto:info@hnivc.edu.vn">info@hnivc.edu.vn</a>
 													</li>
 													<li>
 														<i class="fa fa-phone"></i>0243. 8533780

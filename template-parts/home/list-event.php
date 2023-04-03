@@ -1,6 +1,6 @@
 <?php
 $args = [
-	'category_name' => 'su-kien-sap-toi',
+	'category_name' => 'tin-tuc',
 	'post_type'	=> 'post',
 	'posts_per_page' => 10,
 ];
@@ -8,7 +8,7 @@ $the_query = new WP_Query($args);
 ?>
 <section class="event-home-page">
 	<div class="container">
-		<h2 class="title-primary center">SỰ KIỆN SẮP TỚI</h2>
+		<h2 class="title-primary center">Tin tức</h2>
 		<div class="slider-event owl-carousel">
 			<?php
 			if ($the_query->have_posts()) :
