@@ -6,7 +6,7 @@ jQuery( function ( $ ) {
 
 	function slickSlide() {
 
-		$( '.slider-main' ).owlCarousel( {
+		$( '.slider-main', ).owlCarousel( {
 			loop: true,
 			margin: 10,
 			autoplay: false,
@@ -55,6 +55,17 @@ jQuery( function ( $ ) {
 					items: 5
 				}
 			}
+		} );
+
+		$( '.video-home-bg', ).owlCarousel( {
+			loop: true,
+			margin: 10,
+			autoplay: false,
+			autoplayTimeout: 5000,
+			autoplaySpeed: 1500,
+			nav: true,
+			items: 1
+
 		} );
 
 	};
