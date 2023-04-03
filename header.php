@@ -136,7 +136,7 @@
 												'container' => '',
 												'container_class' => '',
 												'container_id' => '',
-												'menu_class' => 'menu-main',
+												'menu_class' => 'dropdown',
 											))
 											?>
 										</nav>

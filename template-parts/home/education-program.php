@@ -63,7 +63,7 @@ $terms2 = get_terms(
 									<?php
 									$args2      = [
 										'post_type'      => 'programs',
-										'posts_per_page' => 15,
+										'posts_per_page' => 7,
 										'offset' => 3,
 										'tax_query'      => [
 											'relation' => 'AND',
