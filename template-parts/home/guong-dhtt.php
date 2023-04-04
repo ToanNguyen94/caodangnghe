@@ -47,7 +47,7 @@ foreach ($groups as $key1 => $group) {
 					</div>
 				</div>
 
-				<div class="col-md-4 col-sm-4 col-6">
+				<div class="col-md-4 col-sm-4 col-xs-12 col-6-10">
 					<div class="item">
 						<?php
 						foreach ($posts2 as $key => $post) :

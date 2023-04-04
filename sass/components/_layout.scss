@@ -1,5 +1,5 @@
 .site-branding img {
-	width: 188px;
+	width: 150px;
 }
 
 .item2 {
@@ -162,6 +162,38 @@ details[open]>summary::after {
 	}
 }
 
+#clickTuyensinh {
+	bottom: 100px;
+
+	img {
+		width: 75%;
+		float: right;
+	}
+}
+
+#totop.top-visible {
+	bottom: 50px;
+}
+
+.zm {
+	position: fixed;
+	margin: 0;
+	padding: 0;
+	left: 10px;
+	bottom: 60px;
+	background: #fff;
+	background-color: transparent;
+	cursor: pointer;
+	font-size: 0;
+	z-index: 1000;
+}
+
 .fixed-header .site-branding {
 	justify-content: center;
+}
+
+@media(max-width:448px) {
+	.logo-footer {
+		padding: 0;
+	}
 }

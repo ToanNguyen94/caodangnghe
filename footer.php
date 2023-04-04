@@ -10,7 +10,13 @@ use Titanweb\cdn\TemplateFunction;
 
 	<!--    -->
 	<div class="second-footer ttm-textcolor-white" style="position: relative;">
+		<div id="clickTuyensinh">
+			<a href="<?= home_url() . '/tuyen-sinh' ?>">
+				<?php TemplateFunction::get_image_path('group-11.png') ?>
+			</a>
+		</div>
 		<div class="container">
+
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 widget-area">
 					<div class="widget widget_text  clearfix">
@@ -85,6 +91,13 @@ use Titanweb\cdn\TemplateFunction;
 	<div class="zoomIn"></div>
 	<div class="pulse"></div>
 	<div class="tada"><a href="tel:0243. 8533780">0243. 8533780</a>
+	</div>
+</div>
+<div class="zm">
+	<div class="tada">
+		<a href="http://dangkyonline.hnivc.edu.vn/" target="_blank">
+			<?php TemplateFunction::get_image_path('dkhoc.png') ?>
+		</a>
 	</div>
 </div>
 <?php wp_footer(); ?>
