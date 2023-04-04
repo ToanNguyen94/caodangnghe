@@ -19,6 +19,7 @@
 	get_template_part('template-parts/home/partner');
 	get_template_part('template-parts/home/form');
 
+	get_template_part('template-parts/home/popup');
 
 	?>
 </main>

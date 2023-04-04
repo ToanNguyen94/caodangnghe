@@ -92,35 +92,6 @@ jQuery( function ( $ ) {
 		} );
 	}
 
-	function counterNumber() {
-		var run = false;
-		if ( !$body.hasClass( 'page-template-home-page' ) ) {
-			return;
-		}
-
-		$window.scroll( function () {
-			var top = $( '.number-home' ).offset().top - window.innerHeight;
-
-			if ( run || $window.scrollTop() <= top ) {
-				return;
-			}
-
-			$( '.count' ).each( function () {
-				$( this ).prop( 'Counter', 0 ).animate( {
-					Counter: $( this ).text()
-				}, {
-					duration: 4000,
-					easing: 'swing',
-					step: function ( now ) {
-						$( this ).text( Math.ceil( now ) );
-					}
-				} );
-			} );
-
-			run = true;
-		} );
-	}
-
 	function popupVideo() {
 		$( '.popup-video' ).magnificPopup( {
 			disableOn: 800,
@@ -132,25 +103,35 @@ jQuery( function ( $ ) {
 		} );
 	}
 
-	function toggleMenu() {
-		const nav = document.querySelector( '.header__menu' );
-		const bg = document.querySelector( '.bgDart' );
-		if ( !nav ) {
-			return;
-		}
-		const menu = nav.querySelector( 'ul' ),
-			button = document.querySelector( '.menu-toggle' );
+	var popupForm = function () {
+		setTimeout( function () {
+			$body.addClass( 'has-popup' );
+			$( '.box-popup' ).css( 'display', 'flex' );
 
-		menu.setAttribute( 'aria-expanded', 'false' );
-		button.addEventListener( 'click', () => {
-			nav.classList.toggle( 'is-open' );
-			bg.classList.toggle( 'open' );
+			$( '.box-popup svg' ).on( 'click', function () {
+				$( '.box-popup' ).hide();
+				$body.removeClass( 'has-popup' );
+			} );
+		}, 0 );
+	};
+	function showpupup() {
+		$( '.btn-clear' ).on( 'click', function () {
+			console.log( 'sdas' );
+			$( '.box-popup' ).css( 'display', 'none' );
 		} );
-		bg.addEventListener( 'click', () => {
-			nav.classList.remove( 'is-open' );
-			bg.classList.remove( 'open' );
+		$( '.box-popup ' ).on( 'click', function () {
+			$( this ).css( 'display', 'none' );
 		} );
-	}
+		// $( '.giftbox' ).on( 'click', function () {
+		// 	$( '.box-form' ).css( 'display', 'block' );
+		// } );
+		// $( '.btn-form-clear' ).on( 'click', function () {
+		// 	$( '.box-form' ).css( 'display', 'none' );
+		// } );
+		// $( '.icon-notification' ).on( 'click', function () {
+		// 	$( '.notifications-wrapper' ).toggleClass( 'show' );
+		// } );
+	};
 
 	function fixMenu() {
 		$window.scroll( function () {
@@ -292,7 +273,6 @@ jQuery( function ( $ ) {
 	fixMenu();
 	btnSeeMore();
 	popupVideo();
-	// counterNumber();
-	// toggleMenu();
-	// fixedMenu();
+	popupForm();
+	showpupup();
 } );
