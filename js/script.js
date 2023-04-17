@@ -4,6 +4,76 @@ jQuery( function ( $ ) {
 	let $window = $( window ),
 		$body = $( 'body' );
 
+	//NAVBAR
+	$( ".navbar-icon" ).on( "click", function () {
+		$( "body, #page" ).toggleClass( "on" );
+		$( this ).toggleClass( "on" );
+	} );
+
+	$( ".overlay-wrap, .navbar-icon.on" ).on( "click", function () {
+		$( "body, #page" ).removeClass( "on" );
+		$( ".navbar-icon" ).removeClass( "on" );
+	} );
+
+	//Btn-search
+
+	$( ".mobile-search .btn-search" ).on( "click", function () {
+		$( this )
+			.next()
+			.slideToggle();
+	} );
+
+	// Allow hover to open menus in desktop screens
+	$( ".dropdown" ).on( "mouseover", function ( e ) {
+		if ( $window.width() > 992 ) $( this ).addClass( "open" );
+	} );
+	$( ".dropdown" ).on( "mouseout", function ( e ) {
+		if ( $window.width() > 992 ) $( this ).removeClass( "open" );
+	} );
+
+	$( ".dropdown i" ).on( "click", function () {
+
+		if ( $window.width() < 992 ) {
+			if (
+				!$( this )
+					.parent()
+					.hasClass( "open" )
+			) {
+				$( this )
+					.parent()
+					.addClass( "open" );
+				$( this )
+					.parent()
+					.find( "a.dropdown-title" )
+					.attr( "style", "color: #fff; font-weight: 700" );
+				// $(this).parent().find('i').show();
+
+			} else {
+				$( this )
+					.parent()
+					.removeClass( "open" );
+				$( this )
+					.parent()
+					.find( "a.dropdown-title" )
+					.attr( "style", "color: #fff; font-weight: normal" );
+				// $(this).parent().find('i').hide();
+
+			}
+
+		}
+
+	} );
+	function showMenu() {
+		var nav = $( '.navbar' );
+		$window.scroll( function () {
+			if ( $( this ).scrollTop() > 90 ) {
+				nav.addClass( "navbar-scroll-on" );
+			} else {
+				nav.removeClass( "navbar-scroll-on" );
+			}
+		} );
+	}
+
 	function slickSlide() {
 
 		$( '.slider-main', ).owlCarousel( {
@@ -122,15 +192,6 @@ jQuery( function ( $ ) {
 		$( '.box-popup ' ).on( 'click', function () {
 			$( this ).css( 'display', 'none' );
 		} );
-		// $( '.giftbox' ).on( 'click', function () {
-		// 	$( '.box-form' ).css( 'display', 'block' );
-		// } );
-		// $( '.btn-form-clear' ).on( 'click', function () {
-		// 	$( '.box-form' ).css( 'display', 'none' );
-		// } );
-		// $( '.icon-notification' ).on( 'click', function () {
-		// 	$( '.notifications-wrapper' ).toggleClass( 'show' );
-		// } );
 	};
 
 	function fixMenu() {
@@ -266,7 +327,7 @@ jQuery( function ( $ ) {
 	}
 
 
-
+	showMenu();
 	slickSlide();
 	ScrollTop();
 	tabTransfer();

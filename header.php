@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html <?php language_attributes() ?>>
+<html <?php
+
+		use Titanweb\cdn\TemplateFunction;
+
+		language_attributes() ?>>
 
 <head>
 	<meta charset="<?php bloginfo('charset') ?>">
@@ -15,136 +19,209 @@
 	<?php wp_body_open(); ?>
 
 	<!--header start-->
-	<header id="masthead" class="header ttm-header-style-classic">
-		<!-- ttm-header-wrap -->
-		<div class="ttm-header-wrap">
-			<!-- ttm-stickable-header-w -->
-			<div id="ttm-stickable-header-w" class="ttm-stickable-header-w clearfix">
-				<!-- ttm-topbar-wrapper -->
-				<div class="ttm-topbar-wrapper ttm-bgcolor-darkgrey ttm-textcolor-white clearfix ttm-topbar-wrapper-mobile">
-					<div class="container">
-						<div class="ttm-topbar-content">
-							<div class="topbar-right text-right">
-								<ul class="top-contact">
-									<li><i class="fa fa-envelope-o"></i><a href="mailto:info@hnivc.edu.vn">info@hnivc.edu.vn</a></li>
-									<li><a href="https://hnivc.edu.vn/">Đăng nhập</a></li>
-								</ul>
-								<ul class="login-top">
-									<li><i class="fa fa-phone"></i> 0243. 8533780</li>
-								</ul>
-								<div class="ttm-social-links-wrapper list-inline">
-									<ul class="social-icons">
-										<li><a href="https://www.facebook.com/hnivc131/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-										</li>
-										<li><a href="https://www.tiktok.com/@tiktokhnivc" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-										</li>
-										<li><a href="https://www.youtube.com/channel/UCnzWhlIZRPa9PZJFdEqpbvg" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-										</li>
-									</ul>
-								</div>
+	<header id="top">
+		<div class="overlay-wrap"></div>
+		<nav class="navbar navbar-scroll">
+			<div class="top-nav d-none d-lg-block">
+				<div class="container">
+					<div class="row">
+						<div class="col-logo" style="flex: 0 0 6%;max-width: 7%;">
+							<div class="huanchuong">
+								<?php TemplateFunction::get_image_path('huan-chuong.jpg') ?>
 							</div>
 						</div>
-					</div>
-
-				</div>
-				<!-- ttm-topbar-wrapper end -->
-				<div id="site-header-menu" class="site-header-menu">
-					<div class="site-header-menu-inner ttm-stickable-header fixed-header visible-title">
-						<div class="container">
-							<div class="row">
-								<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-									<!-- site-branding -->
-									<div class="site-branding">
-										<?= the_custom_logo() ?>
-									</div>
-									<!-- site-branding end -->
-								</div>
-								<div class="col-lg-9 col-md-12 col-sm-12 col-xs-12 medium-responsive">
-									<!-- ttm-topbar-wrapper -->
-									<div class="ttm-topbar-wrapper ttm-bgcolor-darkgrey ttm-textcolor-white clearfix">
-										<div class="ttm-topbar-content">
-
-											<div class="topbar-right text-right">
-												<ul class="top-contact">
-													<li>
-														<i class="fa fa-envelope"></i><a href="mailto:info@hnivc.edu.vn">info@hnivc.edu.vn</a>
-													</li>
-													<li>
-														<i class="fa fa-phone"></i>0243. 8533780
-													</li>
-												</ul>
-												<div id="site-navigation" class="site-navigation">
-													<nav class="menu menu-header" style="float: left">
-														<ul class="dropdown">
-															<li class="menu-item has-submenu"><a href="#">Thư Viện</a>
-																<ul class="sub-menu">
-																	<li>
-																		<a href="#">Giáo Trình Nội Bộ </a>
-																	</li>
-																</ul>
-															</li>
-															<li class="menu-item"><a href="<?= get_home_url() . '/lien-he' ?>">Liên hệ</a>
-															</li>
-															<li class="menu-item"><a href="#">Tra cứu</a>
-															</li>
-														</ul>
-													</nav>
-												</div>
-											</div>
-											<div class="ttm-social-links-wrapper list-inline">
-												<ul class="social-icons">
-													<li><a href="https://www.facebook.com/hnivc131/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-													</li>
-													<li><a href="https://www.tiktok.com/@tiktokhnivc" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-													</li>
-													<li><a href="https://www.youtube.com/channel/UCnzWhlIZRPa9PZJFdEqpbvg" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-													</li>
-
-												</ul>
-											</div>
-										</div>
-
-									</div>
-									<!-- ttm-topbar-wrapper end -->
-									<!--site-navigation -->
-									<div id="site-navigation" class="site-navigation">
-
-										<div class="ttm-menu-toggle">
-											<input type="checkbox" id="menu-toggle-form">
-											<label for="menu-toggle-form" class="ttm-menu-toggle-block">
-												<span class="toggle-block toggle-blocks-1"></span>
-												<span class="toggle-block toggle-blocks-2"></span>
-												<span class="toggle-block toggle-blocks-3"></span>
-											</label>
-										</div>
-
-										<nav id="menu" class="menu">
-											<?php
-											wp_nav_menu(array(
-												'theme_location' => 'primary',
-												'menu_id' => 'primary',
-												'container' => '',
-												'container_class' => '',
-												'container_id' => '',
-												'menu_class' => 'dropdown',
-											))
-											?>
-										</nav>
-
-									</div>
-									<!-- site-navigation end-->
-								</div>
+						<div class="col-logo">
+							<div class="logo">
+								<?= the_custom_logo() ?>
 							</div>
-
-
+						</div>
+						<div class="col-text">
+							<h1>
+								Trường trung cấp kinh tế - kỹ thuật <br>
+								<span>bắc thăng long</span>
+							</h1>
+							<p>đồng hành cùng thành công của bạn</p>
+						</div>
+						<div class="col-hotline">
+							<a href="tel:0964.617.481">
+								<div class="hotline">
+									<div class="img">
+										<?php TemplateFunction::get_image_path('phone.png') ?>
+									</div>
+									<p>
+										<span>Hotline</span><br>0964.617.481 - 0243.881.2693
+									</p>
+								</div>
+							</a>
+							<form role="search" method="get" id="searchform" class="searchForm" action="<?= home_url('/') ?>">
+								<input type="text" value="<?php get_search_query() ?>" name="s" id="s" placeholder="Nhập từ khóa tìm kiếm" />
+								<input type="submit" value=""></input>
+							</form>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- ttm-stickable-header-w end-->
-		</div>
+			<div id="main-nav">
+				<div class="container">
+					<div class="navbar-icon">
+						<div class="navbar-icon-inner"></div>
+					</div>
+					<div class="logo">
+						<?= the_custom_logo() ?>
+					</div>
+					<div class="mobile-search">
+						<div class="btn-search">
+							<i class="fa fa-search" aria-hidden="true"></i>
+						</div>
+						<form role="search" method="get" id="searchform" class="searchForm" action="<?= home_url('/') ?>">
+							<input type="text" value="<?php get_search_query() ?>" name="s" id="s" placeholder="Nhập từ khóa tìm kiếm" />
+							<input type="submit" value=""></input>
+						</form>
+					</div>
 
-		<!--ttm-header-wrap end -->
+					<div id="site-header-menu">
+						<div id="site-navigation">
+							<nav id="menu" class="menu">
+								<?php
+								wp_nav_menu(array(
+									'theme_location' => 'primary',
+									'menu_id' => 'primary',
+									'container' => '',
+									'container_class' => '',
+									'container_id' => '',
+									'menu_class' => 'dropdown',
+								))
+								?>
+							</nav>
+						</div>
+					</div>
+					<!-- <div id="navbar-list-wrap" class="navbar-list-wrap">
+						<?php
+						wp_nav_menu([
+							'theme_location' => 'primary',
+							'menu_id' => 'primary',
+							'container' => '',
+							'container_class' => '',
+							'container_id' => '',
+							'menu_class' => 'dropdown',
+						])
+						?>
+
+
+						<ul class="navbar-list d-lg-none">
+							<li>
+								<a href="https://btl.edu.vn/hs-sv-hien-tai.html" class="link">HS-SV hiện tại</a>
+							</li>
+
+							<li>
+								<a href="https://btl.edu.vn/hs-sv-tiem-nang.html" class="link">HS-SV tiềm năng</a>
+							</li>
+
+							<li>
+
+								<a href="https://btl.edu.vn/cuu-hoc-vien.html" class="link">Cựu học viên</a>
+
+							</li>
+
+
+
+							<li>
+
+								<a href="https://btl.edu.vn/phu-huynh.html" class="link">Phụ huynh</a>
+
+							</li>
+
+
+
+							<li>
+
+								<a href="https://btl.edu.vn/can-bo-giao-vien-nhan-vien.html" class="link">Cán bộ
+									giáo viên - nhân viên</a>
+
+							</li>
+
+
+
+							<li>
+
+								<a href="https://btl.edu.vn/ba-cong-khai-ac185.html" class="link">Ba công khai</a>
+
+							</li>
+
+
+
+
+						</ul>
+
+
+					</div> -->
+				</div>
+			</div>
+			<!-- <div class="navbar-thin d-none d-lg-block">
+
+				<div class="container">
+
+					<ul class="nav">
+
+
+
+						<li>
+
+							<a href="https://btl.edu.vn/hs-sv-hien-tai.html" class="link">HS-SV hiện tại</a>
+
+						</li>
+
+
+
+						<li>
+
+							<a href="https://btl.edu.vn/hs-sv-tiem-nang.html" class="link">HS-SV tiềm năng</a>
+
+						</li>
+
+
+
+						<li>
+
+							<a href="https://btl.edu.vn/cuu-hoc-vien.html" class="link">Cựu học viên</a>
+
+						</li>
+
+
+
+						<li>
+
+							<a href="https://btl.edu.vn/phu-huynh.html" class="link">Phụ huynh</a>
+
+						</li>
+
+
+
+						<li>
+
+							<a href="https://btl.edu.vn/can-bo-giao-vien-nhan-vien.html" class="link">Cán bộ giáo
+								viên - nhân viên</a>
+
+						</li>
+
+
+
+						<li>
+
+							<a href="https://btl.edu.vn/ba-cong-khai-ac185.html" class="link">Ba công khai</a>
+
+						</li>
+
+
+
+
+						<div class="nav-mobile"><i class="fa fa-bars"></i></div>
+					</ul>
+
+				</div>
+
+			</div> -->
+		</nav>
 	</header>
 	<!--header end-->
 
