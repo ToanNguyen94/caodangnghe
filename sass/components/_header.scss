@@ -67,8 +67,8 @@
 .top-nav .col-text {
 	-webkit-box-flex: 0;
 	-ms-flex: 0 0 30%;
-	flex: 0 0 30%;
-	max-width: 30%;
+	flex: 1 0 30%;
+	// max-width: 30%;
 	text-transform: uppercase;
 	border-left: 2px solid #1a1f40;
 }
@@ -78,6 +78,7 @@
 	color: #1a1f40;
 	line-height: 1.4;
 	margin: 0;
+	font-family: var(--font-lora);
 	font-weight: 700;
 }
 
@@ -90,6 +91,7 @@
 .top-nav .col-text p {
 	color: #e35e12;
 	letter-spacing: 0.5px;
+	font-family: var(--font-lora);
 	font-weight: 700;
 	margin: 0;
 }
