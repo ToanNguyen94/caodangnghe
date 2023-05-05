@@ -2,29 +2,36 @@
 
 use Titanweb\cdn\TemplateFunction;
 
+$list_categories = rwmb_meta('list-sidebar', ['object_type' => 'setting'], 'setting-page');
 $categories = rwmb_meta('select-category', ['object_type' => 'setting'], 'setting-page');
 foreach ($categories as $category) {
 	$name_top = $categories[0]->name;
 	$name_bot = $categories[1]->name;
 }
-$args      = [
+$args_top     = [
 	'category_name'  => $name_top,
 	'post_type'      => 'post',
 	'posts_per_page' => 5,
 ];
-$the_query = new WP_Query($args);
+$args_bot      = [
+	'category_name'  => $name_bot,
+	'post_type'      => 'post',
+	'posts_per_page' => 5,
+];
+$the_query_top = new WP_Query($args_top);
+$the_query_bot = new WP_Query($args_bot);
 
-$archive_id = get_queried_object_id();
-if ($archive_id != 4) {
-	$archive_id = 0;
-}
-$terms      = get_terms([
-	'taxonomy'   => 'category',
-	'hide_empty' => 1,
-	// 'child_of'   => 1,
-	// 'childless ' => true,
-	'parent'     => $archive_id,
-]);
+// $archive_id = get_queried_object_id();
+// if ($archive_id != 4) {
+// 	$archive_id = 0;
+// }
+// $terms      = get_terms([
+// 	'taxonomy'   => 'category',
+// 	'hide_empty' => 1,
+// 	// 'child_of'   => 1,
+// 	// 'childless ' => true,
+// 	'parent'     => $archive_id,
+// ]);
 ?>
 <div class="col-md-3 col-sm-3 col-xs-12">
 	<div class="sidebar-new">
@@ -32,26 +39,23 @@ $terms      = get_terms([
 			<h3 class="widget-title">Danh mục</h3>
 			<ul>
 				<?php
-				foreach ($terms as $term) :
+				foreach ($list_categories as $list_category) :
 				?>
 					<li>
-						<a href="<?= get_term_link($term) ?>"><?= $term->name ?></a>
+						<a href="<?= get_term_link($list_category) ?>"><?= $list_category->name ?></a>
 						<span><?php TemplateFunction::get_image_path('arn.png') ?></span>
 					</li>
 				<?php endforeach; ?>
 			</ul>
 		</aside>
 
-		<?php
-		$the_query = new WP_Query($args);
-		?>
 		<aside class="widget post-widget">
 			<h3 class="widget-title"><?= $name_top ?></h3>
 			<ul class="widget-post ttm-recent-post-list">
 				<?php
-				if ($the_query->have_posts()) :
-					while ($the_query->have_posts()) :
-						$the_query->the_post();
+				if ($the_query_top->have_posts()) :
+					while ($the_query_top->have_posts()) :
+						$the_query_top->the_post();
 				?>
 						<li>
 							<a href="<?= the_permalink() ?>"> <?= get_the_post_thumbnail() ?> </a>
@@ -68,9 +72,9 @@ $terms      = get_terms([
 		<aside class="widget tuyensinhaside-widget">
 			<h3 class="widget-title"><?= $name_bot ?></h3>
 			<?php
-			if ($the_query->have_posts()) :
-				while ($the_query->have_posts()) :
-					$the_query->the_post();
+			if ($the_query_bot->have_posts()) :
+				while ($the_query_bot->have_posts()) :
+					$the_query_bot->the_post();
 			?>
 					<div class="nav-widget">
 						<div class="item">
