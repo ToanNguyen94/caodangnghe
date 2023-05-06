@@ -15,6 +15,11 @@
 	<?php wp_head() ?>
 </head>
 
+<?php
+$phone = rwmb_meta('header-phone', ['object_type' => 'setting'], 'setting-page');
+$link_phone = rwmb_meta('link_phone', ['object_type' => 'setting'], 'setting-page');
+?>
+
 <body <?php body_class() ?>>
 	<?php wp_body_open(); ?>
 
@@ -44,13 +49,13 @@
 								<p>đồng hành cùng thành công của bạn</p>
 							</div>
 							<div class="col-hotline">
-								<a href="tel:0964.617.481">
+								<a href="tel:<?= $link_phone ?>">
 									<div class="hotline">
 										<div class="img">
 											<?php TemplateFunction::get_image_path('phone.png') ?>
 										</div>
 										<p>
-											<span>Hotline</span><br>0964.617.481 - 0243.881.2693
+											<span>Hotline</span><br><?= $phone ?>
 										</p>
 									</div>
 								</a>
