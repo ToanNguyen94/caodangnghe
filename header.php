@@ -74,7 +74,9 @@ $link_phone = rwmb_meta('link_phone', ['object_type' => 'setting'], 'setting-pag
 						</div>
 						<div class="logo">
 							<?= the_custom_logo() ?>
-							<?php TemplateFunction::get_image_path('btl.jpg') ?>
+							<a href="<?= home_url() ?>">
+								<?php TemplateFunction::get_image_path('btl.jpg') ?>
+							</a>
 						</div>
 						<div class="mobile-search">
 							<div class="btn-search">
