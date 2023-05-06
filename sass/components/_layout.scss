@@ -3,9 +3,35 @@
 }
 
 .banner-title {
-	padding: 15px;
+	padding: 15px 0 15px;
 	background: #ee8526;
 	color: #fff;
+
+	p {
+		margin: 0;
+	}
+}
+
+.wrapper {
+	overflow-x: hidden;
+}
+
+.target {
+	animation-name: rightToLeft;
+	animation-duration: 10s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	/* animation: rightToLeft 4.5s linear infinite; */
+}
+
+@keyframes rightToLeft {
+	0% {
+		transform: translateX(60%);
+	}
+
+	100% {
+		transform: translateX(-60%);
+	}
 }
 
 .item2 {

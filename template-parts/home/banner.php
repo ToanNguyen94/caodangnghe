@@ -1,26 +1,25 @@
 <?php
 
-use Titanweb\cdn\TemplateFunction;
-
-$groups   = rwmb_meta('banner_group');
+$images   = rwmb_meta('banner_image');
+$text = rwmb_meta('banner-text');
+if (!$images) {
+	return;
+}
 ?>
 
 <div class="slider-main owl-carousel">
 	<?php
-	foreach ($groups as $group) :
-		$image = isset($group['banner_img']) ? $group['banner_img'] : '';
-		$title = isset($group['banner_title']) ? $group['banner_title'] : '';
-
+	foreach ($images as $image) :
 	?>
 		<div class="item">
 			<a href="">
-				<?php
-				TemplateFunction::get_image_id($image);
-				?>
+				<img src="<?= esc_url(wp_get_attachment_image_url($image['ID'], 'full')) ?>" alt="">
 			</a>
-			<h2 class="title-primary banner-title center"><?= $title; ?></h2>
 		</div>
 	<?php
 	endforeach;
 	?>
+</div>
+<div class="wrapper title-primary banner-title center">
+	<p class="target"><?= $text; ?></p>
 </div>
