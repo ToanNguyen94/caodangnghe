@@ -5,14 +5,22 @@
 
 use Titanweb\cdn\TemplateFunction;
 
+$about = rwmb_meta('footer-about', ['object_type' => 'setting'], 'setting-page');
+$map = rwmb_meta('footer-map', ['object_type' => 'setting'], 'setting-page');
+$link_fb = rwmb_meta('link-fb', ['object_type' => 'setting'], 'setting-page');
+$link_you = rwmb_meta('link-you', ['object_type' => 'setting'], 'setting-page');
+$link_in = rwmb_meta('link-in', ['object_type' => 'setting'], 'setting-page');
+$link_tiktok = rwmb_meta('link-tiktok', ['object_type' => 'setting'], 'setting-page');
+$link_hotline = rwmb_meta('link_hotline', ['object_type' => 'setting'], 'setting-page');
+$link_dki = rwmb_meta('link-dki', ['object_type' => 'setting'], 'setting-page');
+$link_tuvan = rwmb_meta('link-tuvan', ['object_type' => 'setting'], 'setting-page');
+
 ?>
 <footer class="footer widget-footer clearfix">
-
-
 	<!--    -->
 	<div class="second-footer ttm-textcolor-white" style="position: relative;">
 		<div id="clickTuyensinh">
-			<a href="<?= home_url() . '/tuyen-sinh' ?>">
+			<a href="<?= $link_tuvan ?>">
 				<?php TemplateFunction::get_image_path('group-11.png') ?>
 			</a>
 		</div>
@@ -22,13 +30,8 @@ use Titanweb\cdn\TemplateFunction;
 				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 widget-area">
 					<div class="widget widget_text  clearfix">
 						<h3 class="widget-title">Về chúng tôi</h3>
-
 						<div class="textwidget widget-text">
-							TRƯỜNG CAO ĐẲNG NGHỀ CÔNG NGHIỆP HÀ NỘI<br>
-							131 Thái Thịnh, Đống Đa, TP. Hà Nội<br>
-							Tel: 0246.2757361 - 0243. 8533780 - 0246. 2753410<br>
-							Email: info@hnivc.edu.vn<br><br>
-							<br>
+							<?= wpautop($about); ?>
 						</div>
 					</div>
 				</div>
@@ -36,25 +39,24 @@ use Titanweb\cdn\TemplateFunction;
 				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 widget-area">
 					<div class="widget widget_nav_menu clearfix center">
 						<div class="logo-footer">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.3046408183027!2d105.76176151415729!3d21.020493193438135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454a15b9aeb8d%3A0x84ec0f4d29a7ab36!2zU8OibiB24bqtbiDEkeG7mW5nIFF14buRYyBnaWEgTeG7uSDEkMOsbmg!5e0!3m2!1svi!2s!4v1680530886736!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+							<?= wpautop($map); ?>
 						</div>
 						<!-- <h2 class="title-footer">TRƯỜNG CAO ĐẲNG NGHỀ CÔNG NGHIỆP HÀ NỘI</h2> -->
 						<div class="social-icons circle social-hover">
 							<ul class="list-inline">
-								<li class="social-facebook"><a class="tooltip-top" target="_blank" href="https://www.facebook.com/hnivc131/" data-tooltip="Facebook">
+								<li class="social-facebook"><a class="tooltip-top" target="_blank" href="<?= $link_fb ?>" data-tooltip="Facebook">
 										<i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
 									</a>
 								</li>
-								<li class="social-flickr"><a class=" tooltip-top" target="_blank" href="https://www.youtube.com/channel/UCnzWhlIZRPa9PZJFdEqpbvg" data-tooltip="Youtube">
+								<li class="social-flickr"><a class=" tooltip-top" target="_blank" href="<?= $link_you ?>" data-tooltip="Youtube">
 										<i class="fa-brands fa-youtube" aria-hidden="true"></i>
 									</a>
 								</li>
-								<li class="social-linkedin"><a class=" tooltip-top" target="_blank" href="https://hnivc.edu.vn/Linkedin" data-tooltip="instagram">
+								<li class="social-linkedin"><a class=" tooltip-top" target="_blank" href="<?= $link_in ?>" data-tooltip="instagram">
 										<i class="fa-brands fa-linkedin" aria-hidden="true"></i>
 									</a>
 								</li>
-								<li class="social-linkedin"><a class=" tooltip-top" target="_blank" href="https://www.tiktok.com/@hnivc131" data-tooltip="Tiktok">
+								<li class="social-linkedin"><a class=" tooltip-top" target="_blank" href="<?= $link_tiktok ?>" data-tooltip="Tiktok">
 										<i class="fa-brands fa-tiktok" aria-hidden="true"></i>
 									</a>
 								</li>
@@ -91,12 +93,12 @@ use Titanweb\cdn\TemplateFunction;
 <div class="call-btn">
 	<div class="zoomIn"></div>
 	<div class="pulse"></div>
-	<div class="tada"><a href="tel:0243. 8533780">0243. 8533780</a>
+	<div class="tada"><a href="tel:<?= $link_hotline ?>"><?= $link_hotline ?></a>
 	</div>
 </div>
 <div class="zm">
 	<div class="tada">
-		<a href="http://dangkyonline.hnivc.edu.vn/" target="_blank">
+		<a href="<?= $link_dki ?>" target="_blank">
 			<?php TemplateFunction::get_image_path('dkhoc.png') ?>
 		</a>
 	</div>
