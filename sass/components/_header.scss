@@ -30,7 +30,8 @@
 
 .navbar .logo img {
 	height: 50px;
-	width: 110px;
+	width: 100%;
+	object-fit: contain;
 }
 
 .top-nav {
@@ -416,7 +417,7 @@
 .menu {
 	position: fixed;
 	top: 0px;
-	left: -270px;
+	left: -100%;
 	width: 270px;
 	height: 100%;
 	background: #033a71;
@@ -668,5 +669,23 @@
 
 	#page {
 		padding-top: 180px;
+	}
+}
+
+@media (max-width: 768px) {
+	#main-nav .container {
+		display: block;
+	}
+
+	body .site-main {
+		padding-top: 75px;
+	}
+
+	#menu {
+		width: 270px;
+	}
+
+	#site-header-menu #site-navigation .menu ul li ul>li:not(:last-child) {
+		border-bottom: 1px solid #a7a7a7;
 	}
 }
