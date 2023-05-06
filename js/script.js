@@ -226,7 +226,7 @@ jQuery( function ( $ ) {
 			$menuTrigger.on( 'click', function ( e ) {
 				e.preventDefault();
 				var t = $( this );
-				t.toggleClass( 'active' ).next( 'ul' ).toggleClass( 'active' );
+				t.toggleClass( 'open' ).next( 'ul' ).toggleClass( 'open' );
 			} );
 		} else {
 		}

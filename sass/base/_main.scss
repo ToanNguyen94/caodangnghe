@@ -2927,19 +2927,7 @@ ul li .icon-box.icon-style-border i {
 
 }
 
-#site-header-menu #site-navigation .menu ul li:hover>ul {
 
-	opacity: 1;
-
-	display: block;
-
-	visibility: visible;
-
-	height: auto;
-
-	transform: translate(0, 0);
-
-}
 
 #site-header-menu #site-navigation .menu ul ul>li {
 
@@ -7201,7 +7189,7 @@ h1.title-contact {
 	width: 100%
 }
 
-#menu ul {
+#menu>ul {
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-wrap: wrap;
@@ -7266,6 +7254,14 @@ h1.title-contact {
 	#formAdmission {
 		max-width: 50%;
 		margin: 0px auto
+	}
+
+	#site-header-menu #site-navigation .menu ul li:hover>ul {
+		opacity: 1;
+		display: block;
+		visibility: visible;
+		height: auto;
+		transform: translate(0, 0);
 	}
 }
 

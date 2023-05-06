@@ -102,19 +102,6 @@ $link_phone = rwmb_meta('link_phone', ['object_type' => 'setting'], 'setting-pag
 								</nav>
 							</div>
 						</div>
-
-						<!-- <div id="navbar-list-wrap" class="navbar-list-wrap">
-							<?php
-							wp_nav_menu(array(
-								'theme_location' => 'primary',
-								'menu_id' => 'primary',
-								'container' => '',
-								'container_class' => '',
-								'container_id' => '',
-								'menu_class' => 'dropdown',
-							))
-							?>
-						</div> -->
 					</div>
 				</div>
 			</nav>
