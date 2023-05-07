@@ -7,6 +7,7 @@ use Titanweb\cdn\TemplateFunction;
 
 $about = rwmb_meta('footer-about', ['object_type' => 'setting'], 'setting-page');
 $map = rwmb_meta('footer-map', ['object_type' => 'setting'], 'setting-page');
+$face = rwmb_meta('code_facebook', ['object_type' => 'setting'], 'setting-page');
 $link_fb = rwmb_meta('link-fb', ['object_type' => 'setting'], 'setting-page');
 $link_you = rwmb_meta('link-you', ['object_type' => 'setting'], 'setting-page');
 $link_in = rwmb_meta('link-in', ['object_type' => 'setting'], 'setting-page');
@@ -70,13 +71,8 @@ $link_tuvan = rwmb_meta('link-tuvan', ['object_type' => 'setting'], 'setting-pag
 
 				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 widget-area">
 					<div class="widget flicker_widget clearfix">
-
 						<h3 class="widget-title">Fanpage Facebook</h3>
-						<div class="fb-page" data-href="https://www.facebook.com/hnivc131/" data-tabs="timeline" data-width="" data-height="130" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-							<blockquote cite="https://www.facebook.com/hnivc131/" class="fb-xfbml-parse-ignore">
-								<a href="https://www.facebook.com/hnivc131/">Trường Cao Đẳng Nghề Công Nghiệp Hà Nội</a>
-							</blockquote>
-						</div>
+						<?= wpautop($face) ?>
 					</div>
 				</div>
 
