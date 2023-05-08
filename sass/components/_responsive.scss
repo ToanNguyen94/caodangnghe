@@ -738,7 +738,7 @@
 
 		background-color: #f8f9fa;
 
-		width: 250px;
+		// width: 250px;
 
 		transform: translate(0, 10px);
 
@@ -1453,11 +1453,9 @@
 	}
 
 	#site-header-menu #site-navigation .menu ul>li ul li>a {
-
 		padding: 15px 15px 15px 0;
-
 		font-size: 15px;
-
+		white-space: inherit;
 	}
 
 	#site-header-menu #site-navigation .menu>ul {

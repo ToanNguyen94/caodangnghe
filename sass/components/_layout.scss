@@ -17,8 +17,9 @@
 }
 
 .target {
+	white-space: nowrap;
 	animation-name: rightToLeft;
-	animation-duration: 10s;
+	animation-duration: 12s;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 	/* animation: rightToLeft 4.5s linear infinite; */
@@ -26,11 +27,11 @@
 
 @keyframes rightToLeft {
 	0% {
-		transform: translateX(60%);
+		transform: translateX(100%);
 	}
 
 	100% {
-		transform: translateX(-60%);
+		transform: translateX(-100%);
 	}
 }
 
@@ -275,5 +276,9 @@ details[open]>summary::after {
 @media(max-width:448px) {
 	.logo-footer {
 		padding: 0;
+	}
+
+	.banner-title .target {
+		font-size: 16px;
 	}
 }
