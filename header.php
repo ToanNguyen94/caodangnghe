@@ -42,11 +42,9 @@ $link_phone = rwmb_meta('link_phone', ['object_type' => 'setting'], 'setting-pag
 								</div>
 							</div>
 							<div class="col-text">
-								<h1>
-									Trường trung cấp kinh tế - kỹ thuật <br>
-									<span>bắc thăng long</span>
-								</h1>
-								<p>đồng hành cùng thành công của bạn</p>
+								<a href="<?= home_url() ?>">
+									<?php TemplateFunction::get_image_path('btld.jpg') ?>
+								</a>
 							</div>
 							<div class="col-hotline">
 								<a href="tel:<?= $link_phone ?>">

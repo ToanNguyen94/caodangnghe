@@ -79,9 +79,9 @@ jQuery( function ( $ ) {
 		$( '.slider-main', ).owlCarousel( {
 			loop: true,
 			margin: 10,
-			autoplay: false,
+			autoplay: true,
 			autoplayTimeout: 5000,
-			autoplaySpeed: 1500,
+			autoplaySpeed: 2000,
 			nav: true,
 			items: 1
 

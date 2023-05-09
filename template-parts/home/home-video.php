@@ -2,6 +2,7 @@
 $video_groups = rwmb_meta('video-groups');
 $link_video1  = rwmb_meta('viedo-link');
 ?>
+<h2 class="title-primary center">Video về nhà trường</h2>
 <div class="video-home-bg owl-carousel">
 	<?php
 	foreach ($video_groups as $group) :

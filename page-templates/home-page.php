@@ -10,7 +10,7 @@
 	<?php
 	get_template_part('template-parts/home/banner');
 	get_template_part('template-parts/home/new');
-	get_template_part('template-parts/home/list-event');
+	get_template_part('template-parts/home/event');
 	// get_template_part('template-parts/home/list-guong');
 	get_template_part('template-parts/home/education-program');
 	get_template_part('template-parts/home/typical-face');

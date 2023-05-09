@@ -29,7 +29,7 @@ $terms2 = get_terms(
 									<img src="<?= esc_url(wp_get_attachment_image_url($idimage['ID']), 'full') ?>" alt="">
 								</a>
 							</div>
-							<h3 class="title"><a href="<?= get_term_link($category_id, $category_taxonomy) ?>">Lĩnh vực: <?= $category_name ?></a></h3>
+							<h3 class="title"><a href="<?= get_term_link($category_id, $category_taxonomy) ?>">Nhóm ngành: <?= $category_name ?></a></h3>
 							<ul class="list-content more">
 								<?php
 								$args      = [
