@@ -26,7 +26,7 @@ $terms2 = get_terms(
 							<div class="image">
 								<a href="<?= get_term_link($category_id, $category_taxonomy) ?>">
 									<?php $idimage = rwmb_meta('category_image', array('object_type' => 'term'), $category_id); ?>
-									<img src="<?= esc_url(wp_get_attachment_image_url($idimage['ID']), 'full') ?>" alt="">
+									<img src="<?= esc_url($idimage['full_url']) ?>" alt="">
 								</a>
 							</div>
 							<h3 class="title"><a href="<?= get_term_link($category_id, $category_taxonomy) ?>">Nhóm ngành: <?= $category_name ?></a></h3>

@@ -35,7 +35,8 @@ $the_query_bot = new WP_Query($args_bot);
 ?>
 <div class="col-md-3 col-sm-3 col-xs-12">
 	<div class="sidebar-new">
-		<aside class="widget widget-categories">
+
+		<!-- <aside class="widget widget-categories">
 			<h3 class="widget-title">Danh mục</h3>
 			<ul>
 				<?php
@@ -47,7 +48,7 @@ $the_query_bot = new WP_Query($args_bot);
 					</li>
 				<?php endforeach; ?>
 			</ul>
-		</aside>
+		</aside> -->
 
 		<aside class="widget post-widget">
 			<h3 class="widget-title"><?= $name_top ?></h3>

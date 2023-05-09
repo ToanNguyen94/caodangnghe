@@ -38,12 +38,13 @@ $link_tuvan = rwmb_meta('link-tuvan', ['object_type' => 'setting'], 'setting-pag
 				</div>
 
 				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 widget-area">
-					<div class="widget widget_nav_menu clearfix center">
+					<div class="widget widget_nav_menu clearfix">
+						<h3 class="widget-title">Địa chỉ nhà trường</h3>
 						<div class="logo-footer">
 							<?= wpautop($map); ?>
 						</div>
 						<!-- <h2 class="title-footer">TRƯỜNG CAO ĐẲNG NGHỀ CÔNG NGHIỆP HÀ NỘI</h2> -->
-						<div class="social-icons circle social-hover">
+						<div class="social-icons circle social-hover center">
 							<ul class="list-inline">
 								<li class="social-facebook"><a class="tooltip-top" target="_blank" href="<?= $link_fb ?>" data-tooltip="Facebook">
 										<i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
@@ -63,7 +64,7 @@ $link_tuvan = rwmb_meta('link-tuvan', ['object_type' => 'setting'], 'setting-pag
 								</li>
 							</ul>
 						</div>
-						<div class="phone-footer">
+						<div class="phone-footer center">
 							<p>HOTLINE 24/7</p>
 						</div>
 					</div>
