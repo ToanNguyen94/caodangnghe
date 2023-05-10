@@ -177,6 +177,15 @@ details[open]>summary::after {
 	margin: 0;
 }
 
+.typical-face .item .image img {
+	height: 230px;
+}
+
+.typical-face .item .nav-image .title-date .title {
+	width: 100%;
+	padding-right: 0;
+}
+
 @media only screen and (min-width: 1200px) {
 	#site-navigation .menu-header ul>li>a {
 		height: auto !important;

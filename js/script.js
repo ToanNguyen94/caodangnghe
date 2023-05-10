@@ -80,14 +80,14 @@ jQuery( function ( $ ) {
 			loop: true,
 			margin: 10,
 			autoplay: true,
-			autoplayTimeout: 5000,
+			autoplayTimeout: 3000,
 			autoplaySpeed: 2000,
 			nav: true,
 			items: 1
 
 		} );
 
-		$( '.slider-event' ).owlCarousel( {
+		$( '.slider-event1' ).owlCarousel( {
 			loop: true,
 			margin: 20,
 			nav: true,
@@ -101,6 +101,24 @@ jQuery( function ( $ ) {
 				},
 				1000: {
 					items: 4
+				}
+			}
+		} );
+		$( '.typical-face' ).owlCarousel( {
+			loop: true,
+			margin: 20,
+			nav: true,
+			autoplay: true,
+			// slideBy: 3,
+			autoplayTimeout: 2000,
+			autoplaySpeed: 1000,
+			// navText: ['<img src="template/frontend/images/ar1-1.png" alt="">', '<img src="template/frontend/images/ar1.png" alt="">'],
+			responsive: {
+				0: {
+					items: 1
+				},
+				1000: {
+					items: 3
 				}
 			}
 		} );
@@ -128,11 +146,11 @@ jQuery( function ( $ ) {
 		} );
 
 		$( '.video-home-bg', ).owlCarousel( {
-			loop: true,
 			margin: 10,
-			autoplay: false,
-			autoplayTimeout: 5000,
-			autoplaySpeed: 1500,
+			autoplay: true,
+			autoplayTimeout: 3500,
+			autoplaySpeed: 2500,
+			loop: true,
 			nav: true,
 			items: 1
 

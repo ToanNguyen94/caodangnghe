@@ -9,7 +9,7 @@ $the_query = new WP_Query($args);
 <section class="event-home-page">
 	<div class="container">
 		<h2 class="title-primary center">Thành tựu và gương mặt nổi bật</h2>
-		<div class="slider-event owl-carousel">
+		<div class="slider-event typical-face owl-carousel">
 			<?php
 			if ($the_query->have_posts()) :
 				while ($the_query->have_posts()) : $the_query->the_post();
@@ -26,10 +26,10 @@ $the_query = new WP_Query($args);
 									<h3 class="title">
 										<a href="<?= the_permalink() ?>"><?= get_the_title() ?></a>
 									</h3>
-									<div class="date">
+									<!-- <div class="date">
 										<span class="m"><?= get_the_date('M') ?></span>
 										<span class="d"><?= get_the_date('d') ?></span>
-									</div>
+									</div> -->
 									<div class="clearfix"></div>
 								</div>
 							</div>
