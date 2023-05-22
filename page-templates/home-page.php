@@ -17,8 +17,8 @@
 	// get_template_part('template-parts/home/typical-face');
 	// get_template_part('template-parts/home/guong-dhtt');
 	get_template_part('template-parts/home/home-video');
-	get_template_part('template-parts/home/partner');
-	get_template_part('template-parts/home/form');
+	// get_template_part('template-parts/home/partner');
+	// get_template_part('template-parts/home/form');
 
 	get_template_part('template-parts/home/popup');
 

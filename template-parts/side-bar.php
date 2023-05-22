@@ -77,26 +77,6 @@ $the_query_bot2 = new WP_Query($args_bot2);
 			</ul>
 		</aside>
 
-		<aside class="widget post-widget">
-			<h3 class="widget-title"><?= $name_bot2 ?></h3>
-			<ul class="widget-post ttm-recent-post-list">
-				<?php
-				if ($the_query_bot2->have_posts()) :
-					while ($the_query_bot2->have_posts()) :
-						$the_query_bot2->the_post();
-				?>
-						<li>
-							<a href="<?= the_permalink() ?>"> <?= get_the_post_thumbnail() ?> </a>
-							<a href="<?= the_permalink() ?>" class="clearfix"><?= the_title() ?></a>
-						</li>
-				<?php
-					endwhile;
-				endif;
-				wp_reset_postdata();
-				?>
-			</ul>
-		</aside>
-
 		<aside class="widget tuyensinhaside-widget">
 			<h3 class="widget-title"><?= $name_bot ?></h3>
 			<?php
@@ -123,6 +103,26 @@ $the_query_bot2 = new WP_Query($args_bot2);
 			endif;
 			wp_reset_postdata();
 			?>
+		</aside>
+
+		<aside class="widget post-widget">
+			<h3 class="widget-title"><?= $name_bot2 ?></h3>
+			<ul class="widget-post ttm-recent-post-list">
+				<?php
+				if ($the_query_bot2->have_posts()) :
+					while ($the_query_bot2->have_posts()) :
+						$the_query_bot2->the_post();
+				?>
+						<li>
+							<a href="<?= the_permalink() ?>"> <?= get_the_post_thumbnail() ?> </a>
+							<a href="<?= the_permalink() ?>" class="clearfix"><?= the_title() ?></a>
+						</li>
+				<?php
+					endwhile;
+				endif;
+				wp_reset_postdata();
+				?>
+			</ul>
 		</aside>
 
 	</div>
