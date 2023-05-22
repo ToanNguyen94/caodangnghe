@@ -11,7 +11,7 @@ $terms2 = get_terms(
 ?>
 <section class="education-program-home">
 	<div class="container">
-		<h2 class="title-primary center">Ngành nghề đào tạo</h2>
+		<h2 class="title-primary center">Các ngành đào tạo</h2>
 		<div class="nav-education-program">
 			<div class="row">
 				<?php

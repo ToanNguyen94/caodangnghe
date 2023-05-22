@@ -8,7 +8,7 @@ $the_query = new WP_Query($args);
 ?>
 <section class="new-hot-home">
 	<div class="container">
-		<h2 class="title-primary center">Sự kiện sắp diễn ra</h2>
+		<h2 class="title-primary center">Sự kiện</h2>
 		<div class="nav-new-hot">
 			<div class="row">
 				<div class="col-md-8 col-sm-8 col-xs-12">

@@ -7,6 +7,7 @@ $categories = rwmb_meta('select-category', ['object_type' => 'setting'], 'settin
 foreach ($categories as $category) {
 	$name_top = $categories[0]->name;
 	$name_bot = $categories[1]->name;
+	$name_bot2 = $categories[2]->name;
 }
 $args_top     = [
 	'category_name'  => $name_top,
@@ -18,8 +19,14 @@ $args_bot      = [
 	'post_type'      => 'post',
 	'posts_per_page' => 5,
 ];
+$args_bot2      = [
+	'category_name'  => $name_bot2,
+	'post_type'      => 'post',
+	'posts_per_page' => 5,
+];
 $the_query_top = new WP_Query($args_top);
 $the_query_bot = new WP_Query($args_bot);
+$the_query_bot2 = new WP_Query($args_bot2);
 
 // $archive_id = get_queried_object_id();
 // if ($archive_id != 4) {
@@ -57,6 +64,26 @@ $the_query_bot = new WP_Query($args_bot);
 				if ($the_query_top->have_posts()) :
 					while ($the_query_top->have_posts()) :
 						$the_query_top->the_post();
+				?>
+						<li>
+							<a href="<?= the_permalink() ?>"> <?= get_the_post_thumbnail() ?> </a>
+							<a href="<?= the_permalink() ?>" class="clearfix"><?= the_title() ?></a>
+						</li>
+				<?php
+					endwhile;
+				endif;
+				wp_reset_postdata();
+				?>
+			</ul>
+		</aside>
+
+		<aside class="widget post-widget">
+			<h3 class="widget-title"><?= $name_bot2 ?></h3>
+			<ul class="widget-post ttm-recent-post-list">
+				<?php
+				if ($the_query_bot2->have_posts()) :
+					while ($the_query_bot2->have_posts()) :
+						$the_query_bot2->the_post();
 				?>
 						<li>
 							<a href="<?= the_permalink() ?>"> <?= get_the_post_thumbnail() ?> </a>
